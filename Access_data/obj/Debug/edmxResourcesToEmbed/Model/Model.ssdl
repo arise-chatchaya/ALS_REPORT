@@ -1,0 +1,798 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="masterModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TB_M_Credit_Term">
+    <Key>
+      <PropertyRef Name="Credit_Term_ID" />
+    </Key>
+    <Property Name="Credit_Term_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Credit_Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="Credit_Term_Value" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="TB_M_Delivery_Type">
+    <Key>
+      <PropertyRef Name="Delivery_Type_ID" />
+    </Key>
+    <Property Name="Delivery_Type_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Delivery_Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="Delivery_Type" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TB_M_HOLIDAYS">
+    <Key>
+      <PropertyRef Name="HOLIDAYS_ID" />
+    </Key>
+    <Property Name="HOLIDAYS_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HOLIDAYS_DATE" Type="date" />
+    <Property Name="HOLIDAYS_DAYS" Type="nvarchar" MaxLength="50" />
+    <Property Name="COMMENT" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="TB_M_Lab_Branch">
+    <Key>
+      <PropertyRef Name="Lab_Branch_ID" />
+    </Key>
+    <Property Name="Lab_Branch_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Lab_Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="Lab_Name" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="TB_M_STATUS">
+    <Key>
+      <PropertyRef Name="STATUS_ID" />
+    </Key>
+    <Property Name="STATUS_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="STATUS_CODE" Type="nvarchar" MaxLength="50" />
+    <Property Name="STATUS_NAME" Type="nvarchar" MaxLength="100" />
+    <Property Name="DOCTYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="DOCTYPE_SUB" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TB_R_BA">
+    <Key>
+      <PropertyRef Name="BA_ID" />
+    </Key>
+    <Property Name="BA_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Package_ID" Type="uniqueidentifier" />
+    <Property Name="BA_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="Quote_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="Invoice_To_Comany" Type="nvarchar" MaxLength="500" />
+    <Property Name="Invoice_To_Person" Type="nvarchar" MaxLength="50" />
+    <Property Name="Invoice_To_Address" Type="nvarchar" MaxLength="500" />
+    <Property Name="Invoice_Cust_Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="Invoice_Note" Type="nvarchar" MaxLength="500" />
+    <Property Name="Report_To_Comany" Type="nvarchar" MaxLength="500" />
+    <Property Name="Reports_To_Address" Type="nvarchar" MaxLength="500" />
+    <Property Name="Reports_To_Tel" Type="nvarchar" MaxLength="50" />
+    <Property Name="Invoice_To_Tel" Type="nvarchar" MaxLength="50" />
+    <Property Name="Delivery_Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="Delivery_Lab" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status_Code" Type="nvarchar" MaxLength="10" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="CreateBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TB_R_CB_BA">
+    <Key>
+      <PropertyRef Name="CB_ID" />
+    </Key>
+    <Property Name="CB_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CB_Package_ID" Type="uniqueidentifier" />
+    <Property Name="CB_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="CB_Quote_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="CB_Invoice_To_Comany" Type="nvarchar" MaxLength="500" />
+    <Property Name="CB_Invoice_To_Person" Type="nvarchar" MaxLength="50" />
+    <Property Name="CB_Invoice_To_Address" Type="nvarchar" MaxLength="500" />
+    <Property Name="CB_Invoice_Cust_Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="CB_Invoice_Note" Type="nvarchar" MaxLength="500" />
+    <Property Name="CB_Report_To_Comany" Type="nvarchar" MaxLength="500" />
+    <Property Name="CB_Reports_To_Address" Type="nvarchar" MaxLength="500" />
+    <Property Name="CB_Reports_To_Tel" Type="nvarchar" MaxLength="50" />
+    <Property Name="CB_Invoice_To_Tel" Type="nvarchar" MaxLength="50" />
+    <Property Name="CB_Delivery_Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="CB_Delivery_Lab" Type="nvarchar" MaxLength="50" />
+    <Property Name="CB_Status_Code" Type="nvarchar" MaxLength="10" />
+    <Property Name="CB_CreateDate" Type="datetime" />
+    <Property Name="CB_CreateBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="CB_UpdateDate" Type="datetime" />
+    <Property Name="CB_UpdateBy" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TB_R_CB_INVOICE">
+    <Key>
+      <PropertyRef Name="CB_Invoice_ID" />
+    </Key>
+    <Property Name="CB_Invoice_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CB_ID" Type="uniqueidentifier" />
+    <Property Name="CB_Invoice_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="CB_Cust_Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="CB_Bill_To_Company" Type="nvarchar" MaxLength="500" />
+    <Property Name="CB_Delivery_Address" Type="nvarchar" MaxLength="500" />
+    <Property Name="CB_Delivery_To_Person" Type="nvarchar" MaxLength="50" />
+    <Property Name="CB_Delivery_To_Tel" Type="nvarchar" MaxLength="50" />
+    <Property Name="CB_Report_To_Comany" Type="nvarchar" MaxLength="50" />
+    <Property Name="CB_Reports_To_Address" Type="nvarchar" MaxLength="500" />
+    <Property Name="CB_Reports_To_Tel" Type="nvarchar" MaxLength="50" />
+    <Property Name="CB_Invoice_Issue_Date" Type="datetime" />
+    <Property Name="CB_Invoice_Date_Override" Type="datetime" />
+    <Property Name="CB_Total_Invoice_Amount_Inc_Vat" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CreditTerm" Type="nvarchar" MaxLength="10" />
+    <Property Name="Status_Code" Type="nvarchar" MaxLength="10" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="CreateBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TB_R_CB_PACKAGE">
+    <Key>
+      <PropertyRef Name="CB_Package_ID" />
+    </Key>
+    <Property Name="CB_Package_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CB_Package_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="CB_Package_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="CB_Package_Delivery_Date" Type="datetime" />
+    <Property Name="CB_Package_DESC" Type="nvarchar" MaxLength="500" />
+    <Property Name="CB_Invoice_To_Address" Type="nvarchar" MaxLength="500" />
+    <Property Name="CB_Invoice_To_Person" Type="nvarchar" MaxLength="50" />
+    <Property Name="CB_Invoice_To_Cust_Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="CB_Invoice_To_Company" Type="nvarchar" MaxLength="500" />
+    <Property Name="CB_Invoice_Delivery_Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="CB_Invoice_Delivery_Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="CB_Invoice_Delivery_Lab" Type="nvarchar" MaxLength="50" />
+    <Property Name="CB_Logistics_Delivery_Date" Type="datetime" />
+    <Property Name="CB_Status_Code" Type="nvarchar" MaxLength="10" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="CreateBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TB_R_INVOICE">
+    <Key>
+      <PropertyRef Name="Invoice_ID" />
+    </Key>
+    <Property Name="Invoice_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="BA_ID" Type="uniqueidentifier" />
+    <Property Name="Invoice_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="Cust_Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="Quote_Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="Bill_To_Company" Type="nvarchar" MaxLength="500" />
+    <Property Name="Delivery_Address" Type="nvarchar" MaxLength="500" />
+    <Property Name="Delivery_To_Person" Type="nvarchar" MaxLength="50" />
+    <Property Name="Delivery_To_Tel" Type="nvarchar" MaxLength="50" />
+    <Property Name="Delivery_Type" Type="nvarchar" MaxLength="200" />
+    <Property Name="Delivery_Lab" Type="nvarchar" MaxLength="200" />
+    <Property Name="Report_To_Comany" Type="nvarchar" MaxLength="50" />
+    <Property Name="Reports_To_Address" Type="nvarchar" MaxLength="500" />
+    <Property Name="Reports_To_Tel" Type="nvarchar" MaxLength="50" />
+    <Property Name="Report_Location" Type="nvarchar(max)" />
+    <Property Name="Invoice_Issue_Date" Type="datetime" />
+    <Property Name="Invoice_Date_Override" Type="datetime" />
+    <Property Name="Invoice_Note" Type="nvarchar(max)" />
+    <Property Name="Invoice_Process" Type="nvarchar" MaxLength="500" />
+    <Property Name="Total_Invoice_Amount_Inc_Vat" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CreditTerm" Type="nvarchar" MaxLength="10" />
+    <Property Name="Status_Code" Type="nvarchar" MaxLength="10" />
+    <Property Name="Is_CB_Created" Type="bit" />
+    <Property Name="GenerateBillingAppointmentPerInvoice" Type="nvarchar" MaxLength="50" />
+    <Property Name="ConsolidateBillingFlag" Type="nvarchar" MaxLength="50" />
+    <Property Name="ConsolidateBillingDeliverToOffice" Type="nvarchar" MaxLength="500" />
+    <Property Name="ConsolidateBillingToPersonName" Type="nvarchar" MaxLength="500" />
+    <Property Name="ConsolidateBillingDeliverToAddress1" Type="nvarchar(max)" />
+    <Property Name="ConsolidateBillingDeliverToAddress2" Type="nvarchar(max)" />
+    <Property Name="ConsolidateBillingDeliverToAddress3" Type="nvarchar(max)" />
+    <Property Name="ConsolidateBillingDeliverToCity" Type="nvarchar" MaxLength="500" />
+    <Property Name="ConsolidateBillingDeliverToState" Type="nvarchar" MaxLength="500" />
+    <Property Name="ConsolidateBillingDeliverToZip" Type="nvarchar" MaxLength="500" />
+    <Property Name="ConsolidateBillingDeliverToLocation" Type="nvarchar" MaxLength="500" />
+    <Property Name="ConsolidateBillingClientCode" Type="nvarchar" MaxLength="500" />
+    <Property Name="ConsolidateBillingCompanyName" Type="nvarchar" MaxLength="500" />
+    <Property Name="ConsolidateBillingToTelephone" Type="nvarchar" MaxLength="500" />
+    <Property Name="ConsolidateBillingToMobile" Type="nvarchar" MaxLength="500" />
+    <Property Name="ConsolidateBillingOtherLocation" Type="nvarchar" MaxLength="500" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="CreateBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TB_R_PACKAGE">
+    <Key>
+      <PropertyRef Name="Package_ID" />
+    </Key>
+    <Property Name="Package_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Package_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="Package_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Package_Delivery_Date" Type="datetime" />
+    <Property Name="Package_DESC" Type="nvarchar" MaxLength="500" />
+    <Property Name="Invoice_To_Address" Type="nvarchar" MaxLength="500" />
+    <Property Name="Invoice_To_Person" Type="nvarchar" MaxLength="50" />
+    <Property Name="Invoice_To_Cust_Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="Invoice_To_Company" Type="nvarchar" MaxLength="500" />
+    <Property Name="Invoice_Delivery_Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Invoice_Delivery_Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="Invoice_Delivery_Lab" Type="nvarchar" MaxLength="50" />
+    <Property Name="Logistics_Delivery_Date" Type="datetime" />
+    <Property Name="Status_Code" Type="nvarchar" MaxLength="10" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="CreateBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TB_S_BillingAppointmentReportData">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="InvoiceId" Type="nvarchar(max)" />
+    <Property Name="InvoiceDeliveryType" Type="nvarchar(max)" />
+    <Property Name="AnalysisReportDeliveryType" Type="nvarchar(max)" />
+    <Property Name="InvoiceDeliveryLaboratory" Type="nvarchar(max)" />
+    <Property Name="AnalysisReportDeliveryLaboratory" Type="nvarchar(max)" />
+    <Property Name="QuoteCode" Type="nvarchar(max)" />
+    <Property Name="CreditTerm" Type="nvarchar(max)" />
+    <Property Name="InvoiceDeliveryClientCode" Type="nvarchar(max)" />
+    <Property Name="AnalysisReportDeliverToClientCode" Type="nvarchar(max)" />
+    <Property Name="AnalysisReportDeliverToClientName" Type="nvarchar(max)" />
+    <Property Name="InvoiceDeliveryClientName" Type="nvarchar(max)" />
+    <Property Name="InvoiceDeliverToPersonName" Type="nvarchar(max)" />
+    <Property Name="InvoiceDeliverToPersonTelephone" Type="nvarchar(max)" />
+    <Property Name="InvoiceDeliverToPersonMobile" Type="nvarchar(max)" />
+    <Property Name="AnalysisReportDeliverToPersonName" Type="nvarchar(max)" />
+    <Property Name="AnalysisReportDeliverToPersonTelephone" Type="nvarchar(max)" />
+    <Property Name="AnalysisReportDeliverToPersonMobile" Type="nvarchar(max)" />
+    <Property Name="InvoiceDeliverToOffice" Type="nvarchar(max)" />
+    <Property Name="InvoiceDeliverToAddress1" Type="nvarchar(max)" />
+    <Property Name="InvoiceDeliverToAddress2" Type="nvarchar(max)" />
+    <Property Name="InvoiceDeliverToAddress3" Type="nvarchar(max)" />
+    <Property Name="InvoiceDeliverToCity" Type="nvarchar(max)" />
+    <Property Name="InvoiceDeliverToState" Type="nvarchar(max)" />
+    <Property Name="InvoiceDeliverToZip" Type="nvarchar(max)" />
+    <Property Name="InvoiceDeliverToLocation" Type="nvarchar(max)" />
+    <Property Name="AnalysisReportDeliverToOffice" Type="nvarchar(max)" />
+    <Property Name="AnalysisReportDeliverToAddress1" Type="nvarchar(max)" />
+    <Property Name="AnalysisReportDeliverToAddress2" Type="nvarchar(max)" />
+    <Property Name="AnalysisReportDeliverToAddress3" Type="nvarchar(max)" />
+    <Property Name="AnalysisReportDeliverToCity" Type="nvarchar(max)" />
+    <Property Name="AnalysisReportDeliverToState" Type="nvarchar(max)" />
+    <Property Name="AnalysisReportDeliverToZip" Type="nvarchar(max)" />
+    <Property Name="AnalysisReportDeliverToLocation" Type="nvarchar(max)" />
+    <Property Name="InvoiceDeliveryNotes" Type="nvarchar(max)" />
+    <Property Name="InvoiceDeliveryProcess" Type="nvarchar(max)" />
+    <Property Name="InvoiceIssuedDate" Type="date" />
+    <Property Name="InvoiceDateOverride" Type="date" />
+    <Property Name="InvoiceNumbersIncludedInSearch" Type="nvarchar(max)" />
+    <Property Name="TotalInvoiceAmountIncludingVat" Type="nvarchar(max)" />
+    <Property Name="ReportToPersonName" Type="nvarchar(max)" />
+    <Property Name="ReportToAddress1" Type="nvarchar(max)" />
+    <Property Name="ReportToAddress2" Type="nvarchar(max)" />
+    <Property Name="ReportToAddress3" Type="nvarchar(max)" />
+    <Property Name="ReportToCity" Type="nvarchar(max)" />
+    <Property Name="ReportToState" Type="nvarchar(max)" />
+    <Property Name="ReportToZip" Type="nvarchar(max)" />
+    <Property Name="ReportToLocation" Type="nvarchar(max)" />
+    <Property Name="BillToClientCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="BillToClientName" Type="nvarchar(max)" />
+    <Property Name="BillToContactPerson" Type="nvarchar" MaxLength="255" />
+    <Property Name="PaymentDeliveryProcess" Type="nvarchar(max)" />
+    <Property Name="PaymentDeliveryNotes" Type="nvarchar(max)" />
+    <Property Name="ReportLocation" Type="nvarchar(max)" />
+    <Property Name="GenerateBillingAppointmentPerInvoice" Type="nvarchar" MaxLength="50" />
+    <Property Name="InvoicePaid" Type="nvarchar(max)" />
+    <Property Name="ConsolidateBillingFlag" Type="nvarchar" MaxLength="50" />
+    <Property Name="ConsolidateBillingDeliverToOffice" Type="nvarchar" MaxLength="500" />
+    <Property Name="ConsolidateBillingToPersonName" Type="nvarchar" MaxLength="500" />
+    <Property Name="ConsolidateBillingDeliverToAddress1" Type="nvarchar(max)" />
+    <Property Name="ConsolidateBillingDeliverToAddress2" Type="nvarchar(max)" />
+    <Property Name="ConsolidateBillingDeliverToAddress3" Type="nvarchar(max)" />
+    <Property Name="ConsolidateBillingDeliverToCity" Type="nvarchar" MaxLength="500" />
+    <Property Name="ConsolidateBillingDeliverToState" Type="nvarchar" MaxLength="500" />
+    <Property Name="ConsolidateBillingDeliverToZip" Type="nvarchar" MaxLength="500" />
+    <Property Name="ConsolidateBillingDeliverToLocation" Type="nvarchar" MaxLength="500" />
+    <Property Name="ConsolidateBillingClientCode" Type="nvarchar" MaxLength="500" />
+    <Property Name="ConsolidateBillingCompanyName" Type="nvarchar" MaxLength="500" />
+    <Property Name="ConsolidateBillingToTelephone" Type="nvarchar" MaxLength="500" />
+    <Property Name="ConsolidateBillingToMobile" Type="nvarchar" MaxLength="500" />
+    <Property Name="ConsolidateBillingOtherLocation" Type="nvarchar" MaxLength="500" />
+    <Property Name="CeateBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TB_S_BillingData">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="InvoiceNumber" Type="nchar" MaxLength="10" />
+    <Property Name="Workorder" Type="nchar" MaxLength="10" />
+    <Property Name="Site" Type="nchar" MaxLength="10" />
+    <Property Name="NAVAccountNumber" Type="nchar" MaxLength="10" />
+    <Property Name="Project" Type="nchar" MaxLength="10" />
+    <Property Name="PurchaseOrder" Type="nvarchar(max)" />
+    <Property Name="ReportToContact" Type="nvarchar(max)" />
+    <Property Name="ReportToOffice" Type="nvarchar(max)" />
+    <Property Name="ReportToClient" Type="nvarchar(max)" />
+    <Property Name="InvoiceContact" Type="nvarchar(max)" />
+    <Property Name="Laboratory" Type="nvarchar(max)" />
+    <Property Name="ClientManager" Type="nvarchar(max)" />
+    <Property Name="ActivityCode" Type="nvarchar(max)" />
+    <Property Name="AFENumber" Type="nvarchar(max)" />
+    <Property Name="ApproverCode" Type="nvarchar(max)" />
+    <Property Name="ContractNumber" Type="nvarchar(max)" />
+    <Property Name="CostCenterClient" Type="nvarchar(max)" />
+    <Property Name="GLAccount" Type="nvarchar(max)" />
+    <Property Name="LegalSiteDescriptionLSD" Type="nvarchar(max)" />
+    <Property Name="ProjectManagerClientSide" Type="nvarchar(max)" />
+    <Property Name="InvoiceFile" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CoCFile" Type="nvarchar(max)" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="CreateBy" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TB_S_CONFIG">
+    <Key>
+      <PropertyRef Name="Config_ID" />
+    </Key>
+    <Property Name="Config_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Config_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Config_Value" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TB_S_InvoiceHeader">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="InvoiceId" Type="nvarchar(max)" />
+    <Property Name="InvoiceNumber" Type="nvarchar(max)" />
+    <Property Name="ClientCode" Type="nvarchar(max)" />
+    <Property Name="InvoiceIssuedDate" Type="date" />
+    <Property Name="InvoiceAmount" Type="nvarchar(max)" />
+    <Property Name="QuoteCode" Type="nvarchar(max)" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="CreateBy" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="AggregatedCounter">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Name="Key" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Value" Type="bigint" Nullable="false" />
+    <Property Name="ExpireAt" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'K2GELBADev.HangFire.Counter' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Counter">
+    <Key>
+      <PropertyRef Name="Key" />
+      <PropertyRef Name="Value" />
+    </Key>
+    <Property Name="Key" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Value" Type="int" Nullable="false" />
+    <Property Name="ExpireAt" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Hash">
+    <Key>
+      <PropertyRef Name="Key" />
+      <PropertyRef Name="Field" />
+    </Key>
+    <Property Name="Key" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Field" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Value" Type="nvarchar(max)" />
+    <Property Name="ExpireAt" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="Job">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StateId" Type="bigint" />
+    <Property Name="StateName" Type="nvarchar" MaxLength="20" />
+    <Property Name="InvocationData" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Arguments" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreatedAt" Type="datetime" Nullable="false" />
+    <Property Name="ExpireAt" Type="datetime" />
+  </EntityType>
+  <EntityType Name="JobParameter">
+    <Key>
+      <PropertyRef Name="JobId" />
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="JobId" Type="bigint" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="Value" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="JobQueue">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Queue" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobId" Type="bigint" Nullable="false" />
+    <Property Name="Queue" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FetchedAt" Type="datetime" />
+  </EntityType>
+  <EntityType Name="List">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Key" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Value" Type="nvarchar(max)" />
+    <Property Name="ExpireAt" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Schema">
+    <Key>
+      <PropertyRef Name="Version" />
+    </Key>
+    <Property Name="Version" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Server">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Data" Type="nvarchar(max)" />
+    <Property Name="LastHeartbeat" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Set">
+    <Key>
+      <PropertyRef Name="Key" />
+      <PropertyRef Name="Value" />
+    </Key>
+    <Property Name="Key" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Score" Type="float" Nullable="false" />
+    <Property Name="Value" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="ExpireAt" Type="datetime" />
+  </EntityType>
+  <EntityType Name="State">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="JobId" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobId" Type="bigint" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Reason" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreatedAt" Type="datetime" Nullable="false" />
+    <Property Name="Data" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'K2GELBADev.dbo.vBillingAppointment' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vBillingAppointment">
+    <Key>
+      <PropertyRef Name="BA_ID" />
+      <PropertyRef Name="DiffAddress" />
+    </Key>
+    <Property Name="BA_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="Package_ID" Type="uniqueidentifier" />
+    <Property Name="BA_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Invoice_Cust_Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="Quote_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="Invoice_To_Comany" Type="nvarchar" MaxLength="500" />
+    <Property Name="Invoice_To_Address" Type="nvarchar" MaxLength="500" />
+    <Property Name="Reports_To_Address" Type="nvarchar" MaxLength="500" />
+    <Property Name="DiffAddress" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="Invoice_Note" Type="nvarchar" MaxLength="500" />
+    <Property Name="Delivery_Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="Delivery_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status_Code" Type="nvarchar" MaxLength="10" />
+    <Property Name="STATUS_NAME" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreateBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'K2GELBADev.dbo.vCB_BillingAppointment' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vCB_BillingAppointment">
+    <Key>
+      <PropertyRef Name="CB_ID" />
+      <PropertyRef Name="DiffAddress" />
+    </Key>
+    <Property Name="CB_Package_ID" Type="uniqueidentifier" />
+    <Property Name="CB_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CB_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="CB_Invoice_ID" Type="uniqueidentifier" />
+    <Property Name="CB_Invoice_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="CB_Invoice_Cust_Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="CB_Quote_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="CB_Bill_To_Company" Type="nvarchar" MaxLength="500" />
+    <Property Name="CB_Invoice_To_Address" Type="nvarchar" MaxLength="500" />
+    <Property Name="CB_Reports_To_Address" Type="nvarchar" MaxLength="500" />
+    <Property Name="DiffAddress" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="CB_Invoice_Note" Type="nvarchar" MaxLength="500" />
+    <Property Name="CB_Delivery_Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="Delivery_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="CB_Status_Code" Type="nvarchar" MaxLength="10" />
+    <Property Name="STATUS_NAME" Type="nvarchar" MaxLength="100" />
+    <Property Name="CB_CreateBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="CB_CreateDate" Type="datetime" />
+    <Property Name="CB_UpdateBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="CB_UpdateDate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'K2GELBADev.dbo.vCB_PackageList' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vCB_PackageList">
+    <Key>
+      <PropertyRef Name="CB_Package_ID" />
+    </Key>
+    <Property Name="CB_Package_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CB_Package_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="CB_Package_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="CB_Package_Delivery_Date" Type="datetime" />
+    <Property Name="CB_Logistics_Delivery_Date" Type="datetime" />
+    <Property Name="CB_Status_Code" Type="nvarchar" MaxLength="10" />
+    <Property Name="STATUS_NAME" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreateBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'K2GELBADev.dbo.vPackage' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vPackage">
+    <Key>
+      <PropertyRef Name="Invoice_ID" />
+      <PropertyRef Name="DiffAddress" />
+    </Key>
+    <Property Name="Package_ID" Type="uniqueidentifier" />
+    <Property Name="BA_ID" Type="uniqueidentifier" />
+    <Property Name="Invoice_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Package_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="Package_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="BA_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="Invoice_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="Quote_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="Cust_Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="Bill_To_Company" Type="nvarchar" MaxLength="500" />
+    <Property Name="Delivery_To_Person" Type="nvarchar" MaxLength="50" />
+    <Property Name="Delivery_To_Tel" Type="nvarchar" MaxLength="50" />
+    <Property Name="Delivery_Address" Type="nvarchar" MaxLength="500" />
+    <Property Name="Report_To_Comany" Type="nvarchar" MaxLength="50" />
+    <Property Name="Reports_To_Tel" Type="nvarchar" MaxLength="50" />
+    <Property Name="Reports_To_Address" Type="nvarchar" MaxLength="500" />
+    <Property Name="Invoice_Note" Type="nvarchar" MaxLength="500" />
+    <Property Name="DiffAddress" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="Invoice_Issue_Date" Type="datetime" />
+    <Property Name="Invoice_Date_Override" Type="datetime" />
+    <Property Name="Total_Invoice_Amount_Inc_Vat" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CreditTerm" Type="nvarchar" MaxLength="10" />
+    <Property Name="Delivery_Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Package_Delivery_Date" Type="datetime" />
+    <Property Name="Logistics_Delivery_Date" Type="datetime" />
+    <Property Name="Status_Code" Type="nvarchar" MaxLength="10" />
+    <Property Name="Expr1" Type="nvarchar" MaxLength="100" />
+    <Property Name="pack_CreateBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="pack_CreateDate" Type="datetime" />
+    <Property Name="BA_CreateBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="BA_CreateDate" Type="datetime" />
+    <Property Name="inv_CreateBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="inv_CreateDate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'K2GELBADev.dbo.vPackageList' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vPackageList">
+    <Key>
+      <PropertyRef Name="Package_ID" />
+    </Key>
+    <Property Name="Package_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Package_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="Package_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Package_Delivery_Date" Type="datetime" />
+    <Property Name="Logistics_Delivery_Date" Type="datetime" />
+    <Property Name="Status_Code" Type="nvarchar" MaxLength="10" />
+    <Property Name="STATUS_NAME" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreateBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime" />
+  </EntityType>
+  <Association Name="FK_HangFire_JobParameter_Job">
+    <End Role="Job" Type="Self.Job" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="JobParameter" Type="Self.JobParameter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Job">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="JobParameter">
+        <PropertyRef Name="JobId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HangFire_State_Job">
+    <End Role="Job" Type="Self.Job" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="State" Type="Self.State" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Job">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="State">
+        <PropertyRef Name="JobId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="usp_AdhocGenerateBANumber" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_AdhocListInvoiceByInvoiceAddress" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="INVOICE_ID" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_CriteriaSearch_CB" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="BILL_TO_COMPANY" Type="nvarchar" Mode="In" />
+    <Parameter Name="OVERRIDE_DATE_FROM" Type="date" Mode="In" />
+    <Parameter Name="OVERRIDE_DATE_TO" Type="date" Mode="In" />
+  </Function>
+  <Function Name="usp_CriteriaSearchBillingAppointment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CRITERIA_TYPE" Type="nvarchar" Mode="In" />
+    <Parameter Name="BA_NO" Type="nvarchar" Mode="In" />
+    <Parameter Name="BILL_TO_COMPANY" Type="nvarchar" Mode="In" />
+    <Parameter Name="QUOTE_NO" Type="nvarchar" Mode="In" />
+    <Parameter Name="INVOICE_NO" Type="nvarchar" Mode="In" />
+    <Parameter Name="DELIVERY_TYPE" Type="nvarchar" Mode="In" />
+    <Parameter Name="INVOICE_DATE_FROM" Type="nvarchar" Mode="In" />
+    <Parameter Name="INVOICE_DATE_TO" Type="nvarchar" Mode="In" />
+    <Parameter Name="PACKAGE_NO" Type="nvarchar" Mode="In" />
+    <Parameter Name="PACKAGE_STATUS" Type="nvarchar" Mode="In" />
+    <Parameter Name="PACKAGE_CREATE_DATE_FROM" Type="nvarchar" Mode="In" />
+    <Parameter Name="PACKAGE_CREATE_DATE_TO" Type="nvarchar" Mode="In" />
+    <Parameter Name="PACKAGE_DELIVERY_DATE_FROM" Type="nvarchar" Mode="In" />
+    <Parameter Name="PACKAGE_DELIVERY_DATE_TO" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_GenerateGUID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_GetNewRunningNo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IsBilling" Type="nvarchar" Mode="In" />
+    <Parameter Name="PackageDeliveryType" Type="nvarchar" Mode="In" />
+    <Parameter Name="PackagelabBranch" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_GetNewRunningNo_CB" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IsBilling" Type="nvarchar" Mode="In" />
+    <Parameter Name="PackageDeliveryType" Type="nvarchar" Mode="In" />
+    <Parameter Name="PackagelabBranch" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_top1_invoice" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="BILL_TO_COMPANY" Type="nvarchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="masterModelStoreContainer">
+    <EntitySet Name="TB_M_Credit_Term" EntityType="Self.TB_M_Credit_Term" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_M_Delivery_Type" EntityType="Self.TB_M_Delivery_Type" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_M_HOLIDAYS" EntityType="Self.TB_M_HOLIDAYS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_M_Lab_Branch" EntityType="Self.TB_M_Lab_Branch" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_M_STATUS" EntityType="Self.TB_M_STATUS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_R_BA" EntityType="Self.TB_R_BA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_R_CB_BA" EntityType="Self.TB_R_CB_BA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_R_CB_INVOICE" EntityType="Self.TB_R_CB_INVOICE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_R_CB_PACKAGE" EntityType="Self.TB_R_CB_PACKAGE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_R_INVOICE" EntityType="Self.TB_R_INVOICE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_R_PACKAGE" EntityType="Self.TB_R_PACKAGE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_S_BillingAppointmentReportData" EntityType="Self.TB_S_BillingAppointmentReportData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_S_BillingData" EntityType="Self.TB_S_BillingData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_S_CONFIG" EntityType="Self.TB_S_CONFIG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_S_InvoiceHeader" EntityType="Self.TB_S_InvoiceHeader" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AggregatedCounter" EntityType="Self.AggregatedCounter" Schema="HangFire" store:Type="Tables" />
+    <EntitySet Name="Hash" EntityType="Self.Hash" Schema="HangFire" store:Type="Tables" />
+    <EntitySet Name="Job" EntityType="Self.Job" Schema="HangFire" store:Type="Tables" />
+    <EntitySet Name="JobParameter" EntityType="Self.JobParameter" Schema="HangFire" store:Type="Tables" />
+    <EntitySet Name="JobQueue" EntityType="Self.JobQueue" Schema="HangFire" store:Type="Tables" />
+    <EntitySet Name="List" EntityType="Self.List" Schema="HangFire" store:Type="Tables" />
+    <EntitySet Name="Schema" EntityType="Self.Schema" Schema="HangFire" store:Type="Tables" />
+    <EntitySet Name="Server" EntityType="Self.Server" Schema="HangFire" store:Type="Tables" />
+    <EntitySet Name="Set" EntityType="Self.Set" Schema="HangFire" store:Type="Tables" />
+    <EntitySet Name="State" EntityType="Self.State" Schema="HangFire" store:Type="Tables" />
+    <EntitySet Name="Counter" EntityType="Self.Counter" store:Type="Tables" store:Schema="HangFire">
+      <DefiningQuery>SELECT 
+    [Counter].[Key] AS [Key], 
+    [Counter].[Value] AS [Value], 
+    [Counter].[ExpireAt] AS [ExpireAt]
+    FROM [HangFire].[Counter] AS [Counter]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vBillingAppointment" EntityType="Self.vBillingAppointment" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vBillingAppointment].[BA_No] AS [BA_No], 
+    [vBillingAppointment].[Package_ID] AS [Package_ID], 
+    [vBillingAppointment].[BA_ID] AS [BA_ID], 
+    [vBillingAppointment].[Invoice_Cust_Code] AS [Invoice_Cust_Code], 
+    [vBillingAppointment].[Quote_No] AS [Quote_No], 
+    [vBillingAppointment].[Invoice_To_Comany] AS [Invoice_To_Comany], 
+    [vBillingAppointment].[Invoice_To_Address] AS [Invoice_To_Address], 
+    [vBillingAppointment].[Reports_To_Address] AS [Reports_To_Address], 
+    [vBillingAppointment].[DiffAddress] AS [DiffAddress], 
+    [vBillingAppointment].[Invoice_Note] AS [Invoice_Note], 
+    [vBillingAppointment].[Delivery_Type] AS [Delivery_Type], 
+    [vBillingAppointment].[Delivery_Name] AS [Delivery_Name], 
+    [vBillingAppointment].[Status_Code] AS [Status_Code], 
+    [vBillingAppointment].[STATUS_NAME] AS [STATUS_NAME], 
+    [vBillingAppointment].[CreateBy] AS [CreateBy], 
+    [vBillingAppointment].[CreateDate] AS [CreateDate], 
+    [vBillingAppointment].[UpdateBy] AS [UpdateBy], 
+    [vBillingAppointment].[UpdateDate] AS [UpdateDate]
+    FROM [dbo].[vBillingAppointment] AS [vBillingAppointment]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vCB_BillingAppointment" EntityType="Self.vCB_BillingAppointment" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vCB_BillingAppointment].[CB_Package_ID] AS [CB_Package_ID], 
+    [vCB_BillingAppointment].[CB_ID] AS [CB_ID], 
+    [vCB_BillingAppointment].[CB_No] AS [CB_No], 
+    [vCB_BillingAppointment].[CB_Invoice_ID] AS [CB_Invoice_ID], 
+    [vCB_BillingAppointment].[CB_Invoice_No] AS [CB_Invoice_No], 
+    [vCB_BillingAppointment].[CB_Invoice_Cust_Code] AS [CB_Invoice_Cust_Code], 
+    [vCB_BillingAppointment].[CB_Quote_No] AS [CB_Quote_No], 
+    [vCB_BillingAppointment].[CB_Bill_To_Company] AS [CB_Bill_To_Company], 
+    [vCB_BillingAppointment].[CB_Invoice_To_Address] AS [CB_Invoice_To_Address], 
+    [vCB_BillingAppointment].[CB_Reports_To_Address] AS [CB_Reports_To_Address], 
+    [vCB_BillingAppointment].[DiffAddress] AS [DiffAddress], 
+    [vCB_BillingAppointment].[CB_Invoice_Note] AS [CB_Invoice_Note], 
+    [vCB_BillingAppointment].[CB_Delivery_Type] AS [CB_Delivery_Type], 
+    [vCB_BillingAppointment].[Delivery_Name] AS [Delivery_Name], 
+    [vCB_BillingAppointment].[CB_Status_Code] AS [CB_Status_Code], 
+    [vCB_BillingAppointment].[STATUS_NAME] AS [STATUS_NAME], 
+    [vCB_BillingAppointment].[CB_CreateBy] AS [CB_CreateBy], 
+    [vCB_BillingAppointment].[CB_CreateDate] AS [CB_CreateDate], 
+    [vCB_BillingAppointment].[CB_UpdateBy] AS [CB_UpdateBy], 
+    [vCB_BillingAppointment].[CB_UpdateDate] AS [CB_UpdateDate]
+    FROM [dbo].[vCB_BillingAppointment] AS [vCB_BillingAppointment]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vCB_PackageList" EntityType="Self.vCB_PackageList" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vCB_PackageList].[CB_Package_ID] AS [CB_Package_ID], 
+    [vCB_PackageList].[CB_Package_No] AS [CB_Package_No], 
+    [vCB_PackageList].[CB_Package_Name] AS [CB_Package_Name], 
+    [vCB_PackageList].[CB_Package_Delivery_Date] AS [CB_Package_Delivery_Date], 
+    [vCB_PackageList].[CB_Logistics_Delivery_Date] AS [CB_Logistics_Delivery_Date], 
+    [vCB_PackageList].[CB_Status_Code] AS [CB_Status_Code], 
+    [vCB_PackageList].[STATUS_NAME] AS [STATUS_NAME], 
+    [vCB_PackageList].[CreateBy] AS [CreateBy], 
+    [vCB_PackageList].[CreateDate] AS [CreateDate]
+    FROM [dbo].[vCB_PackageList] AS [vCB_PackageList]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vPackage" EntityType="Self.vPackage" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vPackage].[Package_ID] AS [Package_ID], 
+    [vPackage].[BA_ID] AS [BA_ID], 
+    [vPackage].[Invoice_ID] AS [Invoice_ID], 
+    [vPackage].[Package_No] AS [Package_No], 
+    [vPackage].[Package_Name] AS [Package_Name], 
+    [vPackage].[BA_No] AS [BA_No], 
+    [vPackage].[Invoice_No] AS [Invoice_No], 
+    [vPackage].[Quote_No] AS [Quote_No], 
+    [vPackage].[Cust_Code] AS [Cust_Code], 
+    [vPackage].[Bill_To_Company] AS [Bill_To_Company], 
+    [vPackage].[Delivery_To_Person] AS [Delivery_To_Person], 
+    [vPackage].[Delivery_To_Tel] AS [Delivery_To_Tel], 
+    [vPackage].[Delivery_Address] AS [Delivery_Address], 
+    [vPackage].[Report_To_Comany] AS [Report_To_Comany], 
+    [vPackage].[Reports_To_Tel] AS [Reports_To_Tel], 
+    [vPackage].[Reports_To_Address] AS [Reports_To_Address], 
+    [vPackage].[Invoice_Note] AS [Invoice_Note], 
+    [vPackage].[DiffAddress] AS [DiffAddress], 
+    [vPackage].[Invoice_Issue_Date] AS [Invoice_Issue_Date], 
+    [vPackage].[Invoice_Date_Override] AS [Invoice_Date_Override], 
+    [vPackage].[Total_Invoice_Amount_Inc_Vat] AS [Total_Invoice_Amount_Inc_Vat], 
+    [vPackage].[CreditTerm] AS [CreditTerm], 
+    [vPackage].[Delivery_Type] AS [Delivery_Type], 
+    [vPackage].[Status_Name] AS [Status_Name], 
+    [vPackage].[Package_Delivery_Date] AS [Package_Delivery_Date], 
+    [vPackage].[Logistics_Delivery_Date] AS [Logistics_Delivery_Date], 
+    [vPackage].[Status_Code] AS [Status_Code], 
+    [vPackage].[Expr1] AS [Expr1], 
+    [vPackage].[pack_CreateBy] AS [pack_CreateBy], 
+    [vPackage].[pack_CreateDate] AS [pack_CreateDate], 
+    [vPackage].[BA_CreateBy] AS [BA_CreateBy], 
+    [vPackage].[BA_CreateDate] AS [BA_CreateDate], 
+    [vPackage].[inv_CreateBy] AS [inv_CreateBy], 
+    [vPackage].[inv_CreateDate] AS [inv_CreateDate]
+    FROM [dbo].[vPackage] AS [vPackage]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vPackageList" EntityType="Self.vPackageList" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vPackageList].[Package_ID] AS [Package_ID], 
+    [vPackageList].[Package_No] AS [Package_No], 
+    [vPackageList].[Package_Name] AS [Package_Name], 
+    [vPackageList].[Package_Delivery_Date] AS [Package_Delivery_Date], 
+    [vPackageList].[Logistics_Delivery_Date] AS [Logistics_Delivery_Date], 
+    [vPackageList].[Status_Code] AS [Status_Code], 
+    [vPackageList].[STATUS_NAME] AS [STATUS_NAME], 
+    [vPackageList].[CreateBy] AS [CreateBy], 
+    [vPackageList].[CreateDate] AS [CreateDate]
+    FROM [dbo].[vPackageList] AS [vPackageList]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_HangFire_JobParameter_Job" Association="Self.FK_HangFire_JobParameter_Job">
+      <End Role="Job" EntitySet="Job" />
+      <End Role="JobParameter" EntitySet="JobParameter" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HangFire_State_Job" Association="Self.FK_HangFire_State_Job">
+      <End Role="Job" EntitySet="Job" />
+      <End Role="State" EntitySet="State" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

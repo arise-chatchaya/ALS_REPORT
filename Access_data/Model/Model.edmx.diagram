@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="107f5a28038e4190a3bc8aef3b614ce1" Name="Diagram1">
+        <EntityTypeShape EntityType="masterModel.TB_M_Credit_Term" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.TB_M_Delivery_Type" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.TB_M_STATUS" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.TB_R_BA" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.TB_R_CB_BA" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.TB_R_CB_INVOICE" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.TB_R_CB_PACKAGE" Width="1.5" PointX="4.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.TB_R_INVOICE" Width="1.5" PointX="6.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.TB_R_PACKAGE" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.TB_S_BillingAppointmentReportData" Width="1.5" PointX="8.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.TB_S_BillingData" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.TB_S_CONFIG" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.TB_S_InvoiceHeader" Width="1.5" PointX="10.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.AggregatedCounter" Width="1.5" PointX="5.75" PointY="12.75" />
+        <EntityTypeShape EntityType="masterModel.Hash" Width="1.5" PointX="11.75" PointY="14.75" />
+        <EntityTypeShape EntityType="masterModel.Job" Width="1.5" PointX="13.75" PointY="10.125" />
+        <EntityTypeShape EntityType="masterModel.JobParameter" Width="1.5" PointX="16" PointY="12.125" />
+        <EntityTypeShape EntityType="masterModel.JobQueue" Width="1.5" PointX="13.75" PointY="14.75" />
+        <EntityTypeShape EntityType="masterModel.List" Width="1.5" PointX="15.75" PointY="0.75" />
+        <EntityTypeShape EntityType="masterModel.Schema" Width="1.5" PointX="15.75" PointY="3.75" />
+        <EntityTypeShape EntityType="masterModel.Server" Width="1.5" PointX="15.75" PointY="5.75" />
+        <EntityTypeShape EntityType="masterModel.Set" Width="1.5" PointX="5.75" PointY="15.75" />
+        <EntityTypeShape EntityType="masterModel.State" Width="1.5" PointX="16" PointY="9.125" />
+        <EntityTypeShape EntityType="masterModel.Counter" Width="1.5" PointX="15.75" PointY="14.75" />
+        <EntityTypeShape EntityType="masterModel.vBillingAppointment" Width="1.5" PointX="3" PointY="16.75" />
+        <EntityTypeShape EntityType="masterModel.vCB_BillingAppointment" Width="1.5" PointX="17.75" PointY="0.75" />
+        <EntityTypeShape EntityType="masterModel.vCB_PackageList" Width="1.5" PointX="11.75" PointY="17.75" />
+        <EntityTypeShape EntityType="masterModel.vPackage" Width="1.5" PointX="13.75" PointY="17.75" />
+        <EntityTypeShape EntityType="masterModel.vPackageList" Width="1.5" PointX="17.75" PointY="14.75" />
+        <AssociationConnector Association="masterModel.FK_HangFire_JobParameter_Job" />
+        <AssociationConnector Association="masterModel.FK_HangFire_State_Job" />
+        <EntityTypeShape EntityType="masterModel.TB_M_HOLIDAYS" Width="1.5" PointX="5.375" PointY="18.75" />
+        <EntityTypeShape EntityType="masterModel.TB_M_Lab_Branch" Width="1.5" PointX="11.375" PointY="7.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

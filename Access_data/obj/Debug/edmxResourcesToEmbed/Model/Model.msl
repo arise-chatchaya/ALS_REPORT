@@ -1,0 +1,687 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="masterModelStoreContainer" CdmEntityContainer="masterEntities">
+    <EntitySetMapping Name="TB_M_Credit_Term">
+      <EntityTypeMapping TypeName="masterModel.TB_M_Credit_Term">
+        <MappingFragment StoreEntitySet="TB_M_Credit_Term">
+          <ScalarProperty Name="Credit_Term_ID" ColumnName="Credit_Term_ID" />
+          <ScalarProperty Name="Credit_Code" ColumnName="Credit_Code" />
+          <ScalarProperty Name="Credit_Term_Value" ColumnName="Credit_Term_Value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_M_Delivery_Type">
+      <EntityTypeMapping TypeName="masterModel.TB_M_Delivery_Type">
+        <MappingFragment StoreEntitySet="TB_M_Delivery_Type">
+          <ScalarProperty Name="Delivery_Type_ID" ColumnName="Delivery_Type_ID" />
+          <ScalarProperty Name="Delivery_Code" ColumnName="Delivery_Code" />
+          <ScalarProperty Name="Delivery_Type" ColumnName="Delivery_Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_M_STATUS">
+      <EntityTypeMapping TypeName="masterModel.TB_M_STATUS">
+        <MappingFragment StoreEntitySet="TB_M_STATUS">
+          <ScalarProperty Name="STATUS_ID" ColumnName="STATUS_ID" />
+          <ScalarProperty Name="STATUS_CODE" ColumnName="STATUS_CODE" />
+          <ScalarProperty Name="STATUS_NAME" ColumnName="STATUS_NAME" />
+          <ScalarProperty Name="DOCTYPE" ColumnName="DOCTYPE" />
+          <ScalarProperty Name="DOCTYPE_SUB" ColumnName="DOCTYPE_SUB" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_R_BA">
+      <EntityTypeMapping TypeName="masterModel.TB_R_BA">
+        <MappingFragment StoreEntitySet="TB_R_BA">
+          <ScalarProperty Name="BA_ID" ColumnName="BA_ID" />
+          <ScalarProperty Name="Package_ID" ColumnName="Package_ID" />
+          <ScalarProperty Name="BA_No" ColumnName="BA_No" />
+          <ScalarProperty Name="Quote_No" ColumnName="Quote_No" />
+          <ScalarProperty Name="Invoice_To_Comany" ColumnName="Invoice_To_Comany" />
+          <ScalarProperty Name="Invoice_To_Person" ColumnName="Invoice_To_Person" />
+          <ScalarProperty Name="Invoice_To_Address" ColumnName="Invoice_To_Address" />
+          <ScalarProperty Name="Invoice_Cust_Code" ColumnName="Invoice_Cust_Code" />
+          <ScalarProperty Name="Invoice_Note" ColumnName="Invoice_Note" />
+          <ScalarProperty Name="Report_To_Comany" ColumnName="Report_To_Comany" />
+          <ScalarProperty Name="Reports_To_Address" ColumnName="Reports_To_Address" />
+          <ScalarProperty Name="Reports_To_Tel" ColumnName="Reports_To_Tel" />
+          <ScalarProperty Name="Invoice_To_Tel" ColumnName="Invoice_To_Tel" />
+          <ScalarProperty Name="Delivery_Type" ColumnName="Delivery_Type" />
+          <ScalarProperty Name="Delivery_Lab" ColumnName="Delivery_Lab" />
+          <ScalarProperty Name="Status_Code" ColumnName="Status_Code" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_R_CB_BA">
+      <EntityTypeMapping TypeName="masterModel.TB_R_CB_BA">
+        <MappingFragment StoreEntitySet="TB_R_CB_BA">
+          <ScalarProperty Name="CB_ID" ColumnName="CB_ID" />
+          <ScalarProperty Name="CB_Package_ID" ColumnName="CB_Package_ID" />
+          <ScalarProperty Name="CB_No" ColumnName="CB_No" />
+          <ScalarProperty Name="CB_Quote_No" ColumnName="CB_Quote_No" />
+          <ScalarProperty Name="CB_Invoice_To_Comany" ColumnName="CB_Invoice_To_Comany" />
+          <ScalarProperty Name="CB_Invoice_To_Person" ColumnName="CB_Invoice_To_Person" />
+          <ScalarProperty Name="CB_Invoice_To_Address" ColumnName="CB_Invoice_To_Address" />
+          <ScalarProperty Name="CB_Invoice_Cust_Code" ColumnName="CB_Invoice_Cust_Code" />
+          <ScalarProperty Name="CB_Invoice_Note" ColumnName="CB_Invoice_Note" />
+          <ScalarProperty Name="CB_Report_To_Comany" ColumnName="CB_Report_To_Comany" />
+          <ScalarProperty Name="CB_Reports_To_Address" ColumnName="CB_Reports_To_Address" />
+          <ScalarProperty Name="CB_Reports_To_Tel" ColumnName="CB_Reports_To_Tel" />
+          <ScalarProperty Name="CB_Invoice_To_Tel" ColumnName="CB_Invoice_To_Tel" />
+          <ScalarProperty Name="CB_Delivery_Type" ColumnName="CB_Delivery_Type" />
+          <ScalarProperty Name="CB_Delivery_Lab" ColumnName="CB_Delivery_Lab" />
+          <ScalarProperty Name="CB_Status_Code" ColumnName="CB_Status_Code" />
+          <ScalarProperty Name="CB_CreateDate" ColumnName="CB_CreateDate" />
+          <ScalarProperty Name="CB_CreateBy" ColumnName="CB_CreateBy" />
+          <ScalarProperty Name="CB_UpdateDate" ColumnName="CB_UpdateDate" />
+          <ScalarProperty Name="CB_UpdateBy" ColumnName="CB_UpdateBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_R_CB_INVOICE">
+      <EntityTypeMapping TypeName="masterModel.TB_R_CB_INVOICE">
+        <MappingFragment StoreEntitySet="TB_R_CB_INVOICE">
+          <ScalarProperty Name="CB_Invoice_ID" ColumnName="CB_Invoice_ID" />
+          <ScalarProperty Name="CB_ID" ColumnName="CB_ID" />
+          <ScalarProperty Name="CB_Invoice_No" ColumnName="CB_Invoice_No" />
+          <ScalarProperty Name="CB_Cust_Code" ColumnName="CB_Cust_Code" />
+          <ScalarProperty Name="CB_Bill_To_Company" ColumnName="CB_Bill_To_Company" />
+          <ScalarProperty Name="CB_Delivery_Address" ColumnName="CB_Delivery_Address" />
+          <ScalarProperty Name="CB_Delivery_To_Person" ColumnName="CB_Delivery_To_Person" />
+          <ScalarProperty Name="CB_Delivery_To_Tel" ColumnName="CB_Delivery_To_Tel" />
+          <ScalarProperty Name="CB_Report_To_Comany" ColumnName="CB_Report_To_Comany" />
+          <ScalarProperty Name="CB_Reports_To_Address" ColumnName="CB_Reports_To_Address" />
+          <ScalarProperty Name="CB_Reports_To_Tel" ColumnName="CB_Reports_To_Tel" />
+          <ScalarProperty Name="CB_Invoice_Issue_Date" ColumnName="CB_Invoice_Issue_Date" />
+          <ScalarProperty Name="CB_Invoice_Date_Override" ColumnName="CB_Invoice_Date_Override" />
+          <ScalarProperty Name="CB_Total_Invoice_Amount_Inc_Vat" ColumnName="CB_Total_Invoice_Amount_Inc_Vat" />
+          <ScalarProperty Name="CreditTerm" ColumnName="CreditTerm" />
+          <ScalarProperty Name="Status_Code" ColumnName="Status_Code" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_R_CB_PACKAGE">
+      <EntityTypeMapping TypeName="masterModel.TB_R_CB_PACKAGE">
+        <MappingFragment StoreEntitySet="TB_R_CB_PACKAGE">
+          <ScalarProperty Name="CB_Package_ID" ColumnName="CB_Package_ID" />
+          <ScalarProperty Name="CB_Package_No" ColumnName="CB_Package_No" />
+          <ScalarProperty Name="CB_Package_Name" ColumnName="CB_Package_Name" />
+          <ScalarProperty Name="CB_Package_Delivery_Date" ColumnName="CB_Package_Delivery_Date" />
+          <ScalarProperty Name="CB_Package_DESC" ColumnName="CB_Package_DESC" />
+          <ScalarProperty Name="CB_Invoice_To_Address" ColumnName="CB_Invoice_To_Address" />
+          <ScalarProperty Name="CB_Invoice_To_Person" ColumnName="CB_Invoice_To_Person" />
+          <ScalarProperty Name="CB_Invoice_To_Cust_Code" ColumnName="CB_Invoice_To_Cust_Code" />
+          <ScalarProperty Name="CB_Invoice_To_Company" ColumnName="CB_Invoice_To_Company" />
+          <ScalarProperty Name="CB_Invoice_Delivery_Phone" ColumnName="CB_Invoice_Delivery_Phone" />
+          <ScalarProperty Name="CB_Invoice_Delivery_Type" ColumnName="CB_Invoice_Delivery_Type" />
+          <ScalarProperty Name="CB_Invoice_Delivery_Lab" ColumnName="CB_Invoice_Delivery_Lab" />
+          <ScalarProperty Name="CB_Logistics_Delivery_Date" ColumnName="CB_Logistics_Delivery_Date" />
+          <ScalarProperty Name="CB_Status_Code" ColumnName="CB_Status_Code" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_R_INVOICE">
+      <EntityTypeMapping TypeName="masterModel.TB_R_INVOICE">
+        <MappingFragment StoreEntitySet="TB_R_INVOICE">
+          <ScalarProperty Name="ConsolidateBillingOtherLocation" ColumnName="ConsolidateBillingOtherLocation" />
+          <ScalarProperty Name="ConsolidateBillingToMobile" ColumnName="ConsolidateBillingToMobile" />
+          <ScalarProperty Name="ConsolidateBillingToTelephone" ColumnName="ConsolidateBillingToTelephone" />
+          <ScalarProperty Name="ConsolidateBillingCompanyName" ColumnName="ConsolidateBillingCompanyName" />
+          <ScalarProperty Name="ConsolidateBillingClientCode" ColumnName="ConsolidateBillingClientCode" />
+          <ScalarProperty Name="ConsolidateBillingDeliverToLocation" ColumnName="ConsolidateBillingDeliverToLocation" />
+          <ScalarProperty Name="ConsolidateBillingDeliverToZip" ColumnName="ConsolidateBillingDeliverToZip" />
+          <ScalarProperty Name="ConsolidateBillingDeliverToState" ColumnName="ConsolidateBillingDeliverToState" />
+          <ScalarProperty Name="ConsolidateBillingDeliverToCity" ColumnName="ConsolidateBillingDeliverToCity" />
+          <ScalarProperty Name="ConsolidateBillingDeliverToAddress3" ColumnName="ConsolidateBillingDeliverToAddress3" />
+          <ScalarProperty Name="ConsolidateBillingDeliverToAddress2" ColumnName="ConsolidateBillingDeliverToAddress2" />
+          <ScalarProperty Name="ConsolidateBillingDeliverToAddress1" ColumnName="ConsolidateBillingDeliverToAddress1" />
+          <ScalarProperty Name="ConsolidateBillingToPersonName" ColumnName="ConsolidateBillingToPersonName" />
+          <ScalarProperty Name="ConsolidateBillingDeliverToOffice" ColumnName="ConsolidateBillingDeliverToOffice" />
+          <ScalarProperty Name="ConsolidateBillingFlag" ColumnName="ConsolidateBillingFlag" />
+          <ScalarProperty Name="GenerateBillingAppointmentPerInvoice" ColumnName="GenerateBillingAppointmentPerInvoice" />
+          <ScalarProperty Name="Is_CB_Created" ColumnName="Is_CB_Created" />
+          <ScalarProperty Name="Report_Location" ColumnName="Report_Location" />
+          <ScalarProperty Name="Delivery_Lab" ColumnName="Delivery_Lab" />
+          <ScalarProperty Name="Delivery_Type" ColumnName="Delivery_Type" />
+          <ScalarProperty Name="Quote_Code" ColumnName="Quote_Code" />
+          <ScalarProperty Name="Invoice_ID" ColumnName="Invoice_ID" />
+          <ScalarProperty Name="BA_ID" ColumnName="BA_ID" />
+          <ScalarProperty Name="Invoice_No" ColumnName="Invoice_No" />
+          <ScalarProperty Name="Cust_Code" ColumnName="Cust_Code" />
+          <ScalarProperty Name="Bill_To_Company" ColumnName="Bill_To_Company" />
+          <ScalarProperty Name="Delivery_Address" ColumnName="Delivery_Address" />
+          <ScalarProperty Name="Delivery_To_Person" ColumnName="Delivery_To_Person" />
+          <ScalarProperty Name="Delivery_To_Tel" ColumnName="Delivery_To_Tel" />
+          <ScalarProperty Name="Report_To_Comany" ColumnName="Report_To_Comany" />
+          <ScalarProperty Name="Reports_To_Address" ColumnName="Reports_To_Address" />
+          <ScalarProperty Name="Reports_To_Tel" ColumnName="Reports_To_Tel" />
+          <ScalarProperty Name="Invoice_Issue_Date" ColumnName="Invoice_Issue_Date" />
+          <ScalarProperty Name="Invoice_Date_Override" ColumnName="Invoice_Date_Override" />
+          <ScalarProperty Name="Invoice_Process" ColumnName="Invoice_Process" />
+          <ScalarProperty Name="Invoice_Note" ColumnName="Invoice_Note" />
+          <ScalarProperty Name="Total_Invoice_Amount_Inc_Vat" ColumnName="Total_Invoice_Amount_Inc_Vat" />
+          <ScalarProperty Name="CreditTerm" ColumnName="CreditTerm" />
+          <ScalarProperty Name="Status_Code" ColumnName="Status_Code" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_R_PACKAGE">
+      <EntityTypeMapping TypeName="masterModel.TB_R_PACKAGE">
+        <MappingFragment StoreEntitySet="TB_R_PACKAGE">
+          <ScalarProperty Name="Package_ID" ColumnName="Package_ID" />
+          <ScalarProperty Name="Package_No" ColumnName="Package_No" />
+          <ScalarProperty Name="Package_Name" ColumnName="Package_Name" />
+          <ScalarProperty Name="Package_Delivery_Date" ColumnName="Package_Delivery_Date" />
+          <ScalarProperty Name="Package_DESC" ColumnName="Package_DESC" />
+          <ScalarProperty Name="Invoice_To_Address" ColumnName="Invoice_To_Address" />
+          <ScalarProperty Name="Invoice_To_Person" ColumnName="Invoice_To_Person" />
+          <ScalarProperty Name="Invoice_To_Cust_Code" ColumnName="Invoice_To_Cust_Code" />
+          <ScalarProperty Name="Invoice_To_Company" ColumnName="Invoice_To_Company" />
+          <ScalarProperty Name="Invoice_Delivery_Phone" ColumnName="Invoice_Delivery_Phone" />
+          <ScalarProperty Name="Invoice_Delivery_Type" ColumnName="Invoice_Delivery_Type" />
+          <ScalarProperty Name="Invoice_Delivery_Lab" ColumnName="Invoice_Delivery_Lab" />
+          <ScalarProperty Name="Logistics_Delivery_Date" ColumnName="Logistics_Delivery_Date" />
+          <ScalarProperty Name="Status_Code" ColumnName="Status_Code" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_S_BillingAppointmentReportData">
+      <EntityTypeMapping TypeName="masterModel.TB_S_BillingAppointmentReportData">
+        <MappingFragment StoreEntitySet="TB_S_BillingAppointmentReportData">
+          <ScalarProperty Name="ConsolidateBillingOtherLocation" ColumnName="ConsolidateBillingOtherLocation" />
+          <ScalarProperty Name="ConsolidateBillingToMobile" ColumnName="ConsolidateBillingToMobile" />
+          <ScalarProperty Name="ConsolidateBillingToTelephone" ColumnName="ConsolidateBillingToTelephone" />
+          <ScalarProperty Name="ConsolidateBillingCompanyName" ColumnName="ConsolidateBillingCompanyName" />
+          <ScalarProperty Name="ConsolidateBillingClientCode" ColumnName="ConsolidateBillingClientCode" />
+          <ScalarProperty Name="ConsolidateBillingDeliverToLocation" ColumnName="ConsolidateBillingDeliverToLocation" />
+          <ScalarProperty Name="ConsolidateBillingDeliverToZip" ColumnName="ConsolidateBillingDeliverToZip" />
+          <ScalarProperty Name="ConsolidateBillingDeliverToState" ColumnName="ConsolidateBillingDeliverToState" />
+          <ScalarProperty Name="ConsolidateBillingDeliverToCity" ColumnName="ConsolidateBillingDeliverToCity" />
+          <ScalarProperty Name="ConsolidateBillingDeliverToAddress3" ColumnName="ConsolidateBillingDeliverToAddress3" />
+          <ScalarProperty Name="ConsolidateBillingDeliverToAddress2" ColumnName="ConsolidateBillingDeliverToAddress2" />
+          <ScalarProperty Name="ConsolidateBillingDeliverToAddress1" ColumnName="ConsolidateBillingDeliverToAddress1" />
+          <ScalarProperty Name="ConsolidateBillingToPersonName" ColumnName="ConsolidateBillingToPersonName" />
+          <ScalarProperty Name="ConsolidateBillingDeliverToOffice" ColumnName="ConsolidateBillingDeliverToOffice" />
+          <ScalarProperty Name="ConsolidateBillingFlag" ColumnName="ConsolidateBillingFlag" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+          <ScalarProperty Name="InvoiceDeliveryType" ColumnName="InvoiceDeliveryType" />
+          <ScalarProperty Name="AnalysisReportDeliveryType" ColumnName="AnalysisReportDeliveryType" />
+          <ScalarProperty Name="InvoiceDeliveryLaboratory" ColumnName="InvoiceDeliveryLaboratory" />
+          <ScalarProperty Name="AnalysisReportDeliveryLaboratory" ColumnName="AnalysisReportDeliveryLaboratory" />
+          <ScalarProperty Name="QuoteCode" ColumnName="QuoteCode" />
+          <ScalarProperty Name="CreditTerm" ColumnName="CreditTerm" />
+          <ScalarProperty Name="InvoiceDeliveryClientCode" ColumnName="InvoiceDeliveryClientCode" />
+          <ScalarProperty Name="AnalysisReportDeliverToClientCode" ColumnName="AnalysisReportDeliverToClientCode" />
+          <ScalarProperty Name="AnalysisReportDeliverToClientName" ColumnName="AnalysisReportDeliverToClientName" />
+          <ScalarProperty Name="InvoiceDeliveryClientName" ColumnName="InvoiceDeliveryClientName" />
+          <ScalarProperty Name="InvoiceDeliverToPersonName" ColumnName="InvoiceDeliverToPersonName" />
+          <ScalarProperty Name="InvoiceDeliverToPersonTelephone" ColumnName="InvoiceDeliverToPersonTelephone" />
+          <ScalarProperty Name="InvoiceDeliverToPersonMobile" ColumnName="InvoiceDeliverToPersonMobile" />
+          <ScalarProperty Name="AnalysisReportDeliverToPersonName" ColumnName="AnalysisReportDeliverToPersonName" />
+          <ScalarProperty Name="AnalysisReportDeliverToPersonTelephone" ColumnName="AnalysisReportDeliverToPersonTelephone" />
+          <ScalarProperty Name="AnalysisReportDeliverToPersonMobile" ColumnName="AnalysisReportDeliverToPersonMobile" />
+          <ScalarProperty Name="InvoiceDeliverToOffice" ColumnName="InvoiceDeliverToOffice" />
+          <ScalarProperty Name="InvoiceDeliverToAddress1" ColumnName="InvoiceDeliverToAddress1" />
+          <ScalarProperty Name="InvoiceDeliverToAddress2" ColumnName="InvoiceDeliverToAddress2" />
+          <ScalarProperty Name="InvoiceDeliverToAddress3" ColumnName="InvoiceDeliverToAddress3" />
+          <ScalarProperty Name="InvoiceDeliverToCity" ColumnName="InvoiceDeliverToCity" />
+          <ScalarProperty Name="InvoiceDeliverToState" ColumnName="InvoiceDeliverToState" />
+          <ScalarProperty Name="InvoiceDeliverToZip" ColumnName="InvoiceDeliverToZip" />
+          <ScalarProperty Name="InvoiceDeliverToLocation" ColumnName="InvoiceDeliverToLocation" />
+          <ScalarProperty Name="AnalysisReportDeliverToOffice" ColumnName="AnalysisReportDeliverToOffice" />
+          <ScalarProperty Name="AnalysisReportDeliverToAddress1" ColumnName="AnalysisReportDeliverToAddress1" />
+          <ScalarProperty Name="AnalysisReportDeliverToAddress2" ColumnName="AnalysisReportDeliverToAddress2" />
+          <ScalarProperty Name="AnalysisReportDeliverToAddress3" ColumnName="AnalysisReportDeliverToAddress3" />
+          <ScalarProperty Name="AnalysisReportDeliverToCity" ColumnName="AnalysisReportDeliverToCity" />
+          <ScalarProperty Name="AnalysisReportDeliverToState" ColumnName="AnalysisReportDeliverToState" />
+          <ScalarProperty Name="AnalysisReportDeliverToZip" ColumnName="AnalysisReportDeliverToZip" />
+          <ScalarProperty Name="AnalysisReportDeliverToLocation" ColumnName="AnalysisReportDeliverToLocation" />
+          <ScalarProperty Name="InvoiceDeliveryNotes" ColumnName="InvoiceDeliveryNotes" />
+          <ScalarProperty Name="InvoiceDeliveryProcess" ColumnName="InvoiceDeliveryProcess" />
+          <ScalarProperty Name="InvoiceIssuedDate" ColumnName="InvoiceIssuedDate" />
+          <ScalarProperty Name="InvoiceDateOverride" ColumnName="InvoiceDateOverride" />
+          <ScalarProperty Name="InvoiceNumbersIncludedInSearch" ColumnName="InvoiceNumbersIncludedInSearch" />
+          <ScalarProperty Name="TotalInvoiceAmountIncludingVat" ColumnName="TotalInvoiceAmountIncludingVat" />
+          <ScalarProperty Name="ReportToPersonName" ColumnName="ReportToPersonName" />
+          <ScalarProperty Name="ReportToAddress1" ColumnName="ReportToAddress1" />
+          <ScalarProperty Name="ReportToAddress2" ColumnName="ReportToAddress2" />
+          <ScalarProperty Name="ReportToAddress3" ColumnName="ReportToAddress3" />
+          <ScalarProperty Name="ReportToCity" ColumnName="ReportToCity" />
+          <ScalarProperty Name="ReportToState" ColumnName="ReportToState" />
+          <ScalarProperty Name="ReportToZip" ColumnName="ReportToZip" />
+          <ScalarProperty Name="ReportToLocation" ColumnName="ReportToLocation" />
+          <ScalarProperty Name="BillToClientCode" ColumnName="BillToClientCode" />
+          <ScalarProperty Name="BillToClientName" ColumnName="BillToClientName" />
+          <ScalarProperty Name="BillToContactPerson" ColumnName="BillToContactPerson" />
+          <ScalarProperty Name="PaymentDeliveryProcess" ColumnName="PaymentDeliveryProcess" />
+          <ScalarProperty Name="PaymentDeliveryNotes" ColumnName="PaymentDeliveryNotes" />
+          <ScalarProperty Name="ReportLocation" ColumnName="ReportLocation" />
+          <ScalarProperty Name="GenerateBillingAppointmentPerInvoice" ColumnName="GenerateBillingAppointmentPerInvoice" />
+          <ScalarProperty Name="InvoicePaid" ColumnName="InvoicePaid" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CeateBy" ColumnName="CeateBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_S_BillingData">
+      <EntityTypeMapping TypeName="masterModel.TB_S_BillingData">
+        <MappingFragment StoreEntitySet="TB_S_BillingData">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="Workorder" ColumnName="Workorder" />
+          <ScalarProperty Name="Site" ColumnName="Site" />
+          <ScalarProperty Name="NAVAccountNumber" ColumnName="NAVAccountNumber" />
+          <ScalarProperty Name="Project" ColumnName="Project" />
+          <ScalarProperty Name="PurchaseOrder" ColumnName="PurchaseOrder" />
+          <ScalarProperty Name="ReportToContact" ColumnName="ReportToContact" />
+          <ScalarProperty Name="ReportToOffice" ColumnName="ReportToOffice" />
+          <ScalarProperty Name="ReportToClient" ColumnName="ReportToClient" />
+          <ScalarProperty Name="InvoiceContact" ColumnName="InvoiceContact" />
+          <ScalarProperty Name="Laboratory" ColumnName="Laboratory" />
+          <ScalarProperty Name="ClientManager" ColumnName="ClientManager" />
+          <ScalarProperty Name="ActivityCode" ColumnName="ActivityCode" />
+          <ScalarProperty Name="AFENumber" ColumnName="AFENumber" />
+          <ScalarProperty Name="ApproverCode" ColumnName="ApproverCode" />
+          <ScalarProperty Name="ContractNumber" ColumnName="ContractNumber" />
+          <ScalarProperty Name="CostCenterClient" ColumnName="CostCenterClient" />
+          <ScalarProperty Name="GLAccount" ColumnName="GLAccount" />
+          <ScalarProperty Name="LegalSiteDescriptionLSD" ColumnName="LegalSiteDescriptionLSD" />
+          <ScalarProperty Name="ProjectManagerClientSide" ColumnName="ProjectManagerClientSide" />
+          <ScalarProperty Name="InvoiceFile" ColumnName="InvoiceFile" />
+          <ScalarProperty Name="CoCFile" ColumnName="CoCFile" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_S_CONFIG">
+      <EntityTypeMapping TypeName="masterModel.TB_S_CONFIG">
+        <MappingFragment StoreEntitySet="TB_S_CONFIG">
+          <ScalarProperty Name="Config_ID" ColumnName="Config_ID" />
+          <ScalarProperty Name="Config_Name" ColumnName="Config_Name" />
+          <ScalarProperty Name="Config_Value" ColumnName="Config_Value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_S_InvoiceHeader">
+      <EntityTypeMapping TypeName="masterModel.TB_S_InvoiceHeader">
+        <MappingFragment StoreEntitySet="TB_S_InvoiceHeader">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="ClientCode" ColumnName="ClientCode" />
+          <ScalarProperty Name="InvoiceIssuedDate" ColumnName="InvoiceIssuedDate" />
+          <ScalarProperty Name="InvoiceAmount" ColumnName="InvoiceAmount" />
+          <ScalarProperty Name="QuoteCode" ColumnName="QuoteCode" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AggregatedCounters">
+      <EntityTypeMapping TypeName="masterModel.AggregatedCounter">
+        <MappingFragment StoreEntitySet="AggregatedCounter">
+          <ScalarProperty Name="ExpireAt" ColumnName="ExpireAt" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Key" ColumnName="Key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hashes">
+      <EntityTypeMapping TypeName="masterModel.Hash">
+        <MappingFragment StoreEntitySet="Hash">
+          <ScalarProperty Name="ExpireAt" ColumnName="ExpireAt" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Field" ColumnName="Field" />
+          <ScalarProperty Name="Key" ColumnName="Key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Jobs">
+      <EntityTypeMapping TypeName="masterModel.Job">
+        <MappingFragment StoreEntitySet="Job">
+          <ScalarProperty Name="ExpireAt" ColumnName="ExpireAt" />
+          <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+          <ScalarProperty Name="Arguments" ColumnName="Arguments" />
+          <ScalarProperty Name="InvocationData" ColumnName="InvocationData" />
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobParameters">
+      <EntityTypeMapping TypeName="masterModel.JobParameter">
+        <MappingFragment StoreEntitySet="JobParameter">
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobQueues">
+      <EntityTypeMapping TypeName="masterModel.JobQueue">
+        <MappingFragment StoreEntitySet="JobQueue">
+          <ScalarProperty Name="FetchedAt" ColumnName="FetchedAt" />
+          <ScalarProperty Name="Queue" ColumnName="Queue" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Lists">
+      <EntityTypeMapping TypeName="masterModel.List">
+        <MappingFragment StoreEntitySet="List">
+          <ScalarProperty Name="ExpireAt" ColumnName="ExpireAt" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Key" ColumnName="Key" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Schemata">
+      <EntityTypeMapping TypeName="masterModel.Schema">
+        <MappingFragment StoreEntitySet="Schema">
+          <ScalarProperty Name="Version" ColumnName="Version" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Servers">
+      <EntityTypeMapping TypeName="masterModel.Server">
+        <MappingFragment StoreEntitySet="Server">
+          <ScalarProperty Name="LastHeartbeat" ColumnName="LastHeartbeat" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sets">
+      <EntityTypeMapping TypeName="masterModel.Set">
+        <MappingFragment StoreEntitySet="Set">
+          <ScalarProperty Name="ExpireAt" ColumnName="ExpireAt" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Score" ColumnName="Score" />
+          <ScalarProperty Name="Key" ColumnName="Key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="States">
+      <EntityTypeMapping TypeName="masterModel.State">
+        <MappingFragment StoreEntitySet="State">
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Counters">
+      <EntityTypeMapping TypeName="masterModel.Counter">
+        <MappingFragment StoreEntitySet="Counter">
+          <ScalarProperty Name="ExpireAt" ColumnName="ExpireAt" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Key" ColumnName="Key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vBillingAppointments">
+      <EntityTypeMapping TypeName="masterModel.vBillingAppointment">
+        <MappingFragment StoreEntitySet="vBillingAppointment">
+          <ScalarProperty Name="Invoice_To_Comany" ColumnName="Invoice_To_Comany" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="STATUS_NAME" ColumnName="STATUS_NAME" />
+          <ScalarProperty Name="Status_Code" ColumnName="Status_Code" />
+          <ScalarProperty Name="Delivery_Name" ColumnName="Delivery_Name" />
+          <ScalarProperty Name="Delivery_Type" ColumnName="Delivery_Type" />
+          <ScalarProperty Name="Invoice_Note" ColumnName="Invoice_Note" />
+          <ScalarProperty Name="DiffAddress" ColumnName="DiffAddress" />
+          <ScalarProperty Name="Reports_To_Address" ColumnName="Reports_To_Address" />
+          <ScalarProperty Name="Invoice_To_Address" ColumnName="Invoice_To_Address" />
+          <ScalarProperty Name="Quote_No" ColumnName="Quote_No" />
+          <ScalarProperty Name="Invoice_Cust_Code" ColumnName="Invoice_Cust_Code" />
+          <ScalarProperty Name="BA_No" ColumnName="BA_No" />
+          <ScalarProperty Name="BA_ID" ColumnName="BA_ID" />
+          <ScalarProperty Name="Package_ID" ColumnName="Package_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vCB_BillingAppointment">
+      <EntityTypeMapping TypeName="masterModel.vCB_BillingAppointment">
+        <MappingFragment StoreEntitySet="vCB_BillingAppointment">
+          <ScalarProperty Name="CB_UpdateDate" ColumnName="CB_UpdateDate" />
+          <ScalarProperty Name="CB_UpdateBy" ColumnName="CB_UpdateBy" />
+          <ScalarProperty Name="CB_CreateDate" ColumnName="CB_CreateDate" />
+          <ScalarProperty Name="CB_CreateBy" ColumnName="CB_CreateBy" />
+          <ScalarProperty Name="STATUS_NAME" ColumnName="STATUS_NAME" />
+          <ScalarProperty Name="CB_Status_Code" ColumnName="CB_Status_Code" />
+          <ScalarProperty Name="Delivery_Name" ColumnName="Delivery_Name" />
+          <ScalarProperty Name="CB_Delivery_Type" ColumnName="CB_Delivery_Type" />
+          <ScalarProperty Name="CB_Invoice_Note" ColumnName="CB_Invoice_Note" />
+          <ScalarProperty Name="DiffAddress" ColumnName="DiffAddress" />
+          <ScalarProperty Name="CB_Reports_To_Address" ColumnName="CB_Reports_To_Address" />
+          <ScalarProperty Name="CB_Invoice_To_Address" ColumnName="CB_Invoice_To_Address" />
+          <ScalarProperty Name="CB_Bill_To_Company" ColumnName="CB_Bill_To_Company" />
+          <ScalarProperty Name="CB_Quote_No" ColumnName="CB_Quote_No" />
+          <ScalarProperty Name="CB_Invoice_Cust_Code" ColumnName="CB_Invoice_Cust_Code" />
+          <ScalarProperty Name="CB_Invoice_No" ColumnName="CB_Invoice_No" />
+          <ScalarProperty Name="CB_Invoice_ID" ColumnName="CB_Invoice_ID" />
+          <ScalarProperty Name="CB_No" ColumnName="CB_No" />
+          <ScalarProperty Name="CB_ID" ColumnName="CB_ID" />
+          <ScalarProperty Name="CB_Package_ID" ColumnName="CB_Package_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vCB_PackageList">
+      <EntityTypeMapping TypeName="masterModel.vCB_PackageList">
+        <MappingFragment StoreEntitySet="vCB_PackageList">
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="STATUS_NAME" ColumnName="STATUS_NAME" />
+          <ScalarProperty Name="CB_Status_Code" ColumnName="CB_Status_Code" />
+          <ScalarProperty Name="CB_Logistics_Delivery_Date" ColumnName="CB_Logistics_Delivery_Date" />
+          <ScalarProperty Name="CB_Package_Delivery_Date" ColumnName="CB_Package_Delivery_Date" />
+          <ScalarProperty Name="CB_Package_Name" ColumnName="CB_Package_Name" />
+          <ScalarProperty Name="CB_Package_No" ColumnName="CB_Package_No" />
+          <ScalarProperty Name="CB_Package_ID" ColumnName="CB_Package_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vPackages">
+      <EntityTypeMapping TypeName="masterModel.vPackage">
+        <MappingFragment StoreEntitySet="vPackage">
+          <ScalarProperty Name="inv_CreateDate" ColumnName="inv_CreateDate" />
+          <ScalarProperty Name="inv_CreateBy" ColumnName="inv_CreateBy" />
+          <ScalarProperty Name="BA_CreateDate" ColumnName="BA_CreateDate" />
+          <ScalarProperty Name="BA_CreateBy" ColumnName="BA_CreateBy" />
+          <ScalarProperty Name="pack_CreateDate" ColumnName="pack_CreateDate" />
+          <ScalarProperty Name="pack_CreateBy" ColumnName="pack_CreateBy" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="Status_Code" ColumnName="Status_Code" />
+          <ScalarProperty Name="Logistics_Delivery_Date" ColumnName="Logistics_Delivery_Date" />
+          <ScalarProperty Name="Package_Delivery_Date" ColumnName="Package_Delivery_Date" />
+          <ScalarProperty Name="Status_Name" ColumnName="Status_Name" />
+          <ScalarProperty Name="Delivery_Type" ColumnName="Delivery_Type" />
+          <ScalarProperty Name="CreditTerm" ColumnName="CreditTerm" />
+          <ScalarProperty Name="Total_Invoice_Amount_Inc_Vat" ColumnName="Total_Invoice_Amount_Inc_Vat" />
+          <ScalarProperty Name="Invoice_Date_Override" ColumnName="Invoice_Date_Override" />
+          <ScalarProperty Name="Invoice_Issue_Date" ColumnName="Invoice_Issue_Date" />
+          <ScalarProperty Name="DiffAddress" ColumnName="DiffAddress" />
+          <ScalarProperty Name="Invoice_Note" ColumnName="Invoice_Note" />
+          <ScalarProperty Name="Reports_To_Address" ColumnName="Reports_To_Address" />
+          <ScalarProperty Name="Reports_To_Tel" ColumnName="Reports_To_Tel" />
+          <ScalarProperty Name="Report_To_Comany" ColumnName="Report_To_Comany" />
+          <ScalarProperty Name="Delivery_Address" ColumnName="Delivery_Address" />
+          <ScalarProperty Name="Delivery_To_Tel" ColumnName="Delivery_To_Tel" />
+          <ScalarProperty Name="Delivery_To_Person" ColumnName="Delivery_To_Person" />
+          <ScalarProperty Name="Bill_To_Company" ColumnName="Bill_To_Company" />
+          <ScalarProperty Name="Cust_Code" ColumnName="Cust_Code" />
+          <ScalarProperty Name="Quote_No" ColumnName="Quote_No" />
+          <ScalarProperty Name="Invoice_No" ColumnName="Invoice_No" />
+          <ScalarProperty Name="BA_No" ColumnName="BA_No" />
+          <ScalarProperty Name="Package_Name" ColumnName="Package_Name" />
+          <ScalarProperty Name="Package_No" ColumnName="Package_No" />
+          <ScalarProperty Name="Invoice_ID" ColumnName="Invoice_ID" />
+          <ScalarProperty Name="BA_ID" ColumnName="BA_ID" />
+          <ScalarProperty Name="Package_ID" ColumnName="Package_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vPackageLists">
+      <EntityTypeMapping TypeName="masterModel.vPackageList">
+        <MappingFragment StoreEntitySet="vPackageList">
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="STATUS_NAME" ColumnName="STATUS_NAME" />
+          <ScalarProperty Name="Status_Code" ColumnName="Status_Code" />
+          <ScalarProperty Name="Logistics_Delivery_Date" ColumnName="Logistics_Delivery_Date" />
+          <ScalarProperty Name="Package_Delivery_Date" ColumnName="Package_Delivery_Date" />
+          <ScalarProperty Name="Package_Name" ColumnName="Package_Name" />
+          <ScalarProperty Name="Package_No" ColumnName="Package_No" />
+          <ScalarProperty Name="Package_ID" ColumnName="Package_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_M_HOLIDAYS">
+      <EntityTypeMapping TypeName="masterModel.TB_M_HOLIDAYS">
+        <MappingFragment StoreEntitySet="TB_M_HOLIDAYS">
+          <ScalarProperty Name="COMMENT" ColumnName="COMMENT" />
+          <ScalarProperty Name="HOLIDAYS_DAYS" ColumnName="HOLIDAYS_DAYS" />
+          <ScalarProperty Name="HOLIDAYS_DATE" ColumnName="HOLIDAYS_DATE" />
+          <ScalarProperty Name="HOLIDAYS_ID" ColumnName="HOLIDAYS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_M_Lab_Branch">
+      <EntityTypeMapping TypeName="masterModel.TB_M_Lab_Branch">
+        <MappingFragment StoreEntitySet="TB_M_Lab_Branch">
+          <ScalarProperty Name="Lab_Name" ColumnName="Lab_Name" />
+          <ScalarProperty Name="Lab_Code" ColumnName="Lab_Code" />
+          <ScalarProperty Name="Lab_Branch_ID" ColumnName="Lab_Branch_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="usp_AdhocGenerateBANumber" FunctionName="masterModel.Store.usp_AdhocGenerateBANumber" />
+    <FunctionImportMapping FunctionImportName="usp_AdhocListInvoiceByInvoiceAddress" FunctionName="masterModel.Store.usp_AdhocListInvoiceByInvoiceAddress">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="masterModel.usp_AdhocListInvoiceByInvoiceAddress_Result">
+          <ScalarProperty Name="Invoice_ID" ColumnName="Invoice_ID" />
+          <ScalarProperty Name="Invoice_No" ColumnName="Invoice_No" />
+          <ScalarProperty Name="Invoice_Issue_Date" ColumnName="Invoice_Issue_Date" />
+          <ScalarProperty Name="Invoice_Date_Override" ColumnName="Invoice_Date_Override" />
+          <ScalarProperty Name="Bill_To_Company" ColumnName="Bill_To_Company" />
+          <ScalarProperty Name="Delivery_Address" ColumnName="Delivery_Address" />
+          <ScalarProperty Name="Delivery_To_Person" ColumnName="Delivery_To_Person" />
+          <ScalarProperty Name="STATUS_NAME" ColumnName="STATUS_NAME" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_CriteriaSearch_CB" FunctionName="masterModel.Store.usp_CriteriaSearch_CB">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="masterModel.usp_CriteriaSearch_CB_Result">
+          <ScalarProperty Name="Invoice_Issue_Date" ColumnName="Invoice_Issue_Date" />
+          <ScalarProperty Name="Invoice_Date_Override" ColumnName="Invoice_Date_Override" />
+          <ScalarProperty Name="Invoice_No" ColumnName="Invoice_No" />
+          <ScalarProperty Name="Invoice_ID" ColumnName="Invoice_ID" />
+          <ScalarProperty Name="Total_Invoice_Amount_Inc_Vat" ColumnName="Total_Invoice_Amount_Inc_Vat" />
+          <ScalarProperty Name="Bill_To_Company" ColumnName="Bill_To_Company" />
+          <ScalarProperty Name="ConsolidateBillingFlag" ColumnName="ConsolidateBillingFlag" />
+          <ScalarProperty Name="Is_CB_Created" ColumnName="Is_CB_Created" />
+          <ScalarProperty Name="Status_Code" ColumnName="Status_Code" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_CriteriaSearchBillingAppointment" FunctionName="masterModel.Store.usp_CriteriaSearchBillingAppointment">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="masterModel.usp_CriteriaSearchBillingAppointment_Result">
+          <ScalarProperty Name="Package_ID" ColumnName="Package_ID" />
+          <ScalarProperty Name="Package_No" ColumnName="Package_No" />
+          <ScalarProperty Name="Package_Name" ColumnName="Package_Name" />
+          <ScalarProperty Name="Package_Delivery_Date" ColumnName="Package_Delivery_Date" />
+          <ScalarProperty Name="Logistics_Delivery_Date" ColumnName="Logistics_Delivery_Date" />
+          <ScalarProperty Name="Status_Code" ColumnName="Status_Code" />
+          <ScalarProperty Name="STATUS_NAME" ColumnName="STATUS_NAME" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_GenerateGUID" FunctionName="masterModel.Store.usp_GenerateGUID" />
+    <FunctionImportMapping FunctionImportName="usp_GetNewRunningNo" FunctionName="masterModel.Store.usp_GetNewRunningNo" />
+    <FunctionImportMapping FunctionImportName="usp_GetNewRunningNo_CB" FunctionName="masterModel.Store.usp_GetNewRunningNo_CB" />
+    <FunctionImportMapping FunctionImportName="usp_top1_invoice" FunctionName="masterModel.Store.usp_top1_invoice">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="masterModel.usp_top1_invoice_Result">
+          <ScalarProperty Name="Invoice_ID" ColumnName="Invoice_ID" />
+          <ScalarProperty Name="BA_ID" ColumnName="BA_ID" />
+          <ScalarProperty Name="Invoice_No" ColumnName="Invoice_No" />
+          <ScalarProperty Name="Cust_Code" ColumnName="Cust_Code" />
+          <ScalarProperty Name="Quote_Code" ColumnName="Quote_Code" />
+          <ScalarProperty Name="Bill_To_Company" ColumnName="Bill_To_Company" />
+          <ScalarProperty Name="Delivery_Address" ColumnName="Delivery_Address" />
+          <ScalarProperty Name="Delivery_To_Person" ColumnName="Delivery_To_Person" />
+          <ScalarProperty Name="Delivery_To_Tel" ColumnName="Delivery_To_Tel" />
+          <ScalarProperty Name="Delivery_Type" ColumnName="Delivery_Type" />
+          <ScalarProperty Name="Delivery_Lab" ColumnName="Delivery_Lab" />
+          <ScalarProperty Name="Report_To_Comany" ColumnName="Report_To_Comany" />
+          <ScalarProperty Name="Reports_To_Address" ColumnName="Reports_To_Address" />
+          <ScalarProperty Name="Reports_To_Tel" ColumnName="Reports_To_Tel" />
+          <ScalarProperty Name="Report_Location" ColumnName="Report_Location" />
+          <ScalarProperty Name="Invoice_Issue_Date" ColumnName="Invoice_Issue_Date" />
+          <ScalarProperty Name="Invoice_Date_Override" ColumnName="Invoice_Date_Override" />
+          <ScalarProperty Name="Invoice_Note" ColumnName="Invoice_Note" />
+          <ScalarProperty Name="Invoice_Process" ColumnName="Invoice_Process" />
+          <ScalarProperty Name="Total_Invoice_Amount_Inc_Vat" ColumnName="Total_Invoice_Amount_Inc_Vat" />
+          <ScalarProperty Name="CreditTerm" ColumnName="CreditTerm" />
+          <ScalarProperty Name="Status_Code" ColumnName="Status_Code" />
+          <ScalarProperty Name="Is_CB_Created" ColumnName="Is_CB_Created" />
+          <ScalarProperty Name="GenerateBillingAppointmentPerInvoice" ColumnName="GenerateBillingAppointmentPerInvoice" />
+          <ScalarProperty Name="ConsolidateBillingFlag" ColumnName="ConsolidateBillingFlag" />
+          <ScalarProperty Name="ConsolidateBillingDeliverToOffice" ColumnName="ConsolidateBillingDeliverToOffice" />
+          <ScalarProperty Name="ConsolidateBillingToPersonName" ColumnName="ConsolidateBillingToPersonName" />
+          <ScalarProperty Name="ConsolidateBillingDeliverToAddress1" ColumnName="ConsolidateBillingDeliverToAddress1" />
+          <ScalarProperty Name="ConsolidateBillingDeliverToAddress2" ColumnName="ConsolidateBillingDeliverToAddress2" />
+          <ScalarProperty Name="ConsolidateBillingDeliverToAddress3" ColumnName="ConsolidateBillingDeliverToAddress3" />
+          <ScalarProperty Name="ConsolidateBillingDeliverToCity" ColumnName="ConsolidateBillingDeliverToCity" />
+          <ScalarProperty Name="ConsolidateBillingDeliverToState" ColumnName="ConsolidateBillingDeliverToState" />
+          <ScalarProperty Name="ConsolidateBillingDeliverToZip" ColumnName="ConsolidateBillingDeliverToZip" />
+          <ScalarProperty Name="ConsolidateBillingDeliverToLocation" ColumnName="ConsolidateBillingDeliverToLocation" />
+          <ScalarProperty Name="ConsolidateBillingClientCode" ColumnName="ConsolidateBillingClientCode" />
+          <ScalarProperty Name="ConsolidateBillingCompanyName" ColumnName="ConsolidateBillingCompanyName" />
+          <ScalarProperty Name="ConsolidateBillingToTelephone" ColumnName="ConsolidateBillingToTelephone" />
+          <ScalarProperty Name="ConsolidateBillingToMobile" ColumnName="ConsolidateBillingToMobile" />
+          <ScalarProperty Name="ConsolidateBillingOtherLocation" ColumnName="ConsolidateBillingOtherLocation" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

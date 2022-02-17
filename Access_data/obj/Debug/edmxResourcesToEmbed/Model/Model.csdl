@@ -1,0 +1,756 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="masterModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TB_M_Credit_Term">
+    <Key>
+      <PropertyRef Name="Credit_Term_ID" />
+    </Key>
+    <Property Name="Credit_Term_ID" Type="Guid" Nullable="false" />
+    <Property Name="Credit_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Credit_Term_Value" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TB_M_Delivery_Type">
+    <Key>
+      <PropertyRef Name="Delivery_Type_ID" />
+    </Key>
+    <Property Name="Delivery_Type_ID" Type="Guid" Nullable="false" />
+    <Property Name="Delivery_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Delivery_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TB_M_STATUS">
+    <Key>
+      <PropertyRef Name="STATUS_ID" />
+    </Key>
+    <Property Name="STATUS_ID" Type="Guid" Nullable="false" />
+    <Property Name="STATUS_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="STATUS_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DOCTYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DOCTYPE_SUB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TB_R_BA">
+    <Key>
+      <PropertyRef Name="BA_ID" />
+    </Key>
+    <Property Name="BA_ID" Type="Guid" Nullable="false" />
+    <Property Name="Package_ID" Type="Guid" />
+    <Property Name="BA_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Quote_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Invoice_To_Comany" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Invoice_To_Person" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Invoice_To_Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Invoice_Cust_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Invoice_Note" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Report_To_Comany" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Reports_To_Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Reports_To_Tel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Invoice_To_Tel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Delivery_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Delivery_Lab" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TB_R_CB_BA">
+    <Key>
+      <PropertyRef Name="CB_ID" />
+    </Key>
+    <Property Name="CB_ID" Type="Guid" Nullable="false" />
+    <Property Name="CB_Package_ID" Type="Guid" />
+    <Property Name="CB_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CB_Quote_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CB_Invoice_To_Comany" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CB_Invoice_To_Person" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CB_Invoice_To_Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CB_Invoice_Cust_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CB_Invoice_Note" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CB_Report_To_Comany" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CB_Reports_To_Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CB_Reports_To_Tel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CB_Invoice_To_Tel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CB_Delivery_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CB_Delivery_Lab" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CB_Status_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="CB_CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="CB_CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CB_UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="CB_UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TB_R_CB_INVOICE">
+    <Key>
+      <PropertyRef Name="CB_Invoice_ID" />
+    </Key>
+    <Property Name="CB_Invoice_ID" Type="Guid" Nullable="false" />
+    <Property Name="CB_ID" Type="Guid" />
+    <Property Name="CB_Invoice_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CB_Cust_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CB_Bill_To_Company" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CB_Delivery_Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CB_Delivery_To_Person" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CB_Delivery_To_Tel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CB_Report_To_Comany" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CB_Reports_To_Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CB_Reports_To_Tel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CB_Invoice_Issue_Date" Type="DateTime" Precision="3" />
+    <Property Name="CB_Invoice_Date_Override" Type="DateTime" Precision="3" />
+    <Property Name="CB_Total_Invoice_Amount_Inc_Vat" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CreditTerm" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Status_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TB_R_CB_PACKAGE">
+    <Key>
+      <PropertyRef Name="CB_Package_ID" />
+    </Key>
+    <Property Name="CB_Package_ID" Type="Guid" Nullable="false" />
+    <Property Name="CB_Package_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CB_Package_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CB_Package_Delivery_Date" Type="DateTime" Precision="3" />
+    <Property Name="CB_Package_DESC" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CB_Invoice_To_Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CB_Invoice_To_Person" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CB_Invoice_To_Cust_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CB_Invoice_To_Company" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CB_Invoice_Delivery_Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CB_Invoice_Delivery_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CB_Invoice_Delivery_Lab" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CB_Logistics_Delivery_Date" Type="DateTime" Precision="3" />
+    <Property Name="CB_Status_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TB_R_INVOICE">
+    <Key>
+      <PropertyRef Name="Invoice_ID" />
+    </Key>
+    <Property Name="Invoice_ID" Type="Guid" Nullable="false" />
+    <Property Name="BA_ID" Type="Guid" />
+    <Property Name="Invoice_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Cust_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Bill_To_Company" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Delivery_Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Delivery_To_Person" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Delivery_To_Tel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Report_To_Comany" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Reports_To_Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Reports_To_Tel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Invoice_Issue_Date" Type="DateTime" Precision="3" />
+    <Property Name="Invoice_Date_Override" Type="DateTime" Precision="3" />
+    <Property Name="Invoice_Process" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Invoice_Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Total_Invoice_Amount_Inc_Vat" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CreditTerm" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Status_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Quote_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Delivery_Type" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Delivery_Lab" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Report_Location" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Is_CB_Created" Type="Boolean" />
+    <Property Name="GenerateBillingAppointmentPerInvoice" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ConsolidateBillingFlag" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ConsolidateBillingDeliverToOffice" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ConsolidateBillingToPersonName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ConsolidateBillingDeliverToAddress1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ConsolidateBillingDeliverToAddress2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ConsolidateBillingDeliverToAddress3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ConsolidateBillingDeliverToCity" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ConsolidateBillingDeliverToState" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ConsolidateBillingDeliverToZip" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ConsolidateBillingDeliverToLocation" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ConsolidateBillingClientCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ConsolidateBillingCompanyName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ConsolidateBillingToTelephone" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ConsolidateBillingToMobile" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ConsolidateBillingOtherLocation" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TB_R_PACKAGE">
+    <Key>
+      <PropertyRef Name="Package_ID" />
+    </Key>
+    <Property Name="Package_ID" Type="Guid" Nullable="false" />
+    <Property Name="Package_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Package_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Package_Delivery_Date" Type="DateTime" Precision="3" />
+    <Property Name="Package_DESC" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Invoice_To_Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Invoice_To_Person" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Invoice_To_Cust_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Invoice_To_Company" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Invoice_Delivery_Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Invoice_Delivery_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Invoice_Delivery_Lab" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Logistics_Delivery_Date" Type="DateTime" Precision="3" />
+    <Property Name="Status_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TB_S_BillingAppointmentReportData">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="InvoiceId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceDeliveryType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AnalysisReportDeliveryType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceDeliveryLaboratory" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AnalysisReportDeliveryLaboratory" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="QuoteCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreditTerm" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceDeliveryClientCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AnalysisReportDeliverToClientCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AnalysisReportDeliverToClientName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceDeliveryClientName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceDeliverToPersonName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceDeliverToPersonTelephone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceDeliverToPersonMobile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AnalysisReportDeliverToPersonName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AnalysisReportDeliverToPersonTelephone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AnalysisReportDeliverToPersonMobile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceDeliverToOffice" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceDeliverToAddress1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceDeliverToAddress2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceDeliverToAddress3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceDeliverToCity" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceDeliverToState" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceDeliverToZip" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceDeliverToLocation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AnalysisReportDeliverToOffice" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AnalysisReportDeliverToAddress1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AnalysisReportDeliverToAddress2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AnalysisReportDeliverToAddress3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AnalysisReportDeliverToCity" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AnalysisReportDeliverToState" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AnalysisReportDeliverToZip" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AnalysisReportDeliverToLocation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceDeliveryNotes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceDeliveryProcess" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceIssuedDate" Type="DateTime" Precision="0" />
+    <Property Name="InvoiceDateOverride" Type="DateTime" Precision="0" />
+    <Property Name="InvoiceNumbersIncludedInSearch" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TotalInvoiceAmountIncludingVat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReportToPersonName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReportToAddress1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReportToAddress2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReportToAddress3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReportToCity" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReportToState" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReportToZip" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReportToLocation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BillToClientCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BillToClientName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BillToContactPerson" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PaymentDeliveryProcess" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PaymentDeliveryNotes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReportLocation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GenerateBillingAppointmentPerInvoice" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="InvoicePaid" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="CeateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ConsolidateBillingFlag" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ConsolidateBillingDeliverToOffice" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ConsolidateBillingToPersonName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ConsolidateBillingDeliverToAddress1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ConsolidateBillingDeliverToAddress2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ConsolidateBillingDeliverToAddress3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ConsolidateBillingDeliverToCity" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ConsolidateBillingDeliverToState" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ConsolidateBillingDeliverToZip" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ConsolidateBillingDeliverToLocation" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ConsolidateBillingClientCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ConsolidateBillingCompanyName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ConsolidateBillingToTelephone" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ConsolidateBillingToMobile" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ConsolidateBillingOtherLocation" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TB_S_BillingData">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="InvoiceNumber" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Workorder" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Site" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="NAVAccountNumber" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Project" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="PurchaseOrder" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReportToContact" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReportToOffice" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReportToClient" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceContact" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Laboratory" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClientManager" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ActivityCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AFENumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ApproverCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ContractNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CostCenterClient" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GLAccount" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LegalSiteDescriptionLSD" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProjectManagerClientSide" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceFile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CoCFile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TB_S_CONFIG">
+    <Key>
+      <PropertyRef Name="Config_ID" />
+    </Key>
+    <Property Name="Config_ID" Type="Guid" Nullable="false" />
+    <Property Name="Config_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Config_Value" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TB_S_InvoiceHeader">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="InvoiceId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClientCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceIssuedDate" Type="DateTime" Precision="0" />
+    <Property Name="InvoiceAmount" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="QuoteCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="masterEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TB_M_Credit_Term" EntityType="Self.TB_M_Credit_Term" />
+    <EntitySet Name="TB_M_Delivery_Type" EntityType="Self.TB_M_Delivery_Type" />
+    <EntitySet Name="TB_M_STATUS" EntityType="Self.TB_M_STATUS" />
+    <EntitySet Name="TB_R_BA" EntityType="Self.TB_R_BA" />
+    <EntitySet Name="TB_R_CB_BA" EntityType="Self.TB_R_CB_BA" />
+    <EntitySet Name="TB_R_CB_INVOICE" EntityType="Self.TB_R_CB_INVOICE" />
+    <EntitySet Name="TB_R_CB_PACKAGE" EntityType="Self.TB_R_CB_PACKAGE" />
+    <EntitySet Name="TB_R_INVOICE" EntityType="Self.TB_R_INVOICE" />
+    <EntitySet Name="TB_R_PACKAGE" EntityType="Self.TB_R_PACKAGE" />
+    <EntitySet Name="TB_S_BillingAppointmentReportData" EntityType="Self.TB_S_BillingAppointmentReportData" />
+    <EntitySet Name="TB_S_BillingData" EntityType="Self.TB_S_BillingData" />
+    <EntitySet Name="TB_S_CONFIG" EntityType="Self.TB_S_CONFIG" />
+    <EntitySet Name="TB_S_InvoiceHeader" EntityType="Self.TB_S_InvoiceHeader" />
+    <EntitySet Name="AggregatedCounters" EntityType="masterModel.AggregatedCounter" />
+    <EntitySet Name="Hashes" EntityType="masterModel.Hash" />
+    <EntitySet Name="Jobs" EntityType="masterModel.Job" />
+    <EntitySet Name="JobParameters" EntityType="masterModel.JobParameter" />
+    <EntitySet Name="JobQueues" EntityType="masterModel.JobQueue" />
+    <EntitySet Name="Lists" EntityType="masterModel.List" />
+    <EntitySet Name="Schemata" EntityType="masterModel.Schema" />
+    <EntitySet Name="Servers" EntityType="masterModel.Server" />
+    <EntitySet Name="Sets" EntityType="masterModel.Set" />
+    <EntitySet Name="States" EntityType="masterModel.State" />
+    <EntitySet Name="Counters" EntityType="masterModel.Counter" />
+    <EntitySet Name="vBillingAppointments" EntityType="masterModel.vBillingAppointment" />
+    <EntitySet Name="vCB_BillingAppointment" EntityType="masterModel.vCB_BillingAppointment" />
+    <EntitySet Name="vCB_PackageList" EntityType="masterModel.vCB_PackageList" />
+    <EntitySet Name="vPackages" EntityType="masterModel.vPackage" />
+    <EntitySet Name="vPackageLists" EntityType="masterModel.vPackageList" />
+    <AssociationSet Name="FK_HangFire_JobParameter_Job" Association="masterModel.FK_HangFire_JobParameter_Job">
+      <End Role="Job" EntitySet="Jobs" />
+      <End Role="JobParameter" EntitySet="JobParameters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HangFire_State_Job" Association="masterModel.FK_HangFire_State_Job">
+      <End Role="Job" EntitySet="Jobs" />
+      <End Role="State" EntitySet="States" />
+    </AssociationSet>
+    <EntitySet Name="TB_M_HOLIDAYS" EntityType="masterModel.TB_M_HOLIDAYS" />
+    <EntitySet Name="TB_M_Lab_Branch" EntityType="masterModel.TB_M_Lab_Branch" />
+    <FunctionImport Name="usp_AdhocGenerateBANumber" ReturnType="Collection(String)" />
+    <FunctionImport Name="usp_AdhocListInvoiceByInvoiceAddress" ReturnType="Collection(masterModel.usp_AdhocListInvoiceByInvoiceAddress_Result)">
+      <Parameter Name="INVOICE_ID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_CriteriaSearch_CB" ReturnType="Collection(masterModel.usp_CriteriaSearch_CB_Result)">
+      <Parameter Name="BILL_TO_COMPANY" Mode="In" Type="String" />
+      <Parameter Name="OVERRIDE_DATE_FROM" Mode="In" Type="DateTime" />
+      <Parameter Name="OVERRIDE_DATE_TO" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="usp_CriteriaSearchBillingAppointment" ReturnType="Collection(masterModel.usp_CriteriaSearchBillingAppointment_Result)">
+      <Parameter Name="CRITERIA_TYPE" Mode="In" Type="String" />
+      <Parameter Name="BA_NO" Mode="In" Type="String" />
+      <Parameter Name="BILL_TO_COMPANY" Mode="In" Type="String" />
+      <Parameter Name="QUOTE_NO" Mode="In" Type="String" />
+      <Parameter Name="INVOICE_NO" Mode="In" Type="String" />
+      <Parameter Name="DELIVERY_TYPE" Mode="In" Type="String" />
+      <Parameter Name="INVOICE_DATE_FROM" Mode="In" Type="String" />
+      <Parameter Name="INVOICE_DATE_TO" Mode="In" Type="String" />
+      <Parameter Name="PACKAGE_NO" Mode="In" Type="String" />
+      <Parameter Name="PACKAGE_STATUS" Mode="In" Type="String" />
+      <Parameter Name="PACKAGE_CREATE_DATE_FROM" Mode="In" Type="String" />
+      <Parameter Name="PACKAGE_CREATE_DATE_TO" Mode="In" Type="String" />
+      <Parameter Name="PACKAGE_DELIVERY_DATE_FROM" Mode="In" Type="String" />
+      <Parameter Name="PACKAGE_DELIVERY_DATE_TO" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_GenerateGUID" ReturnType="Collection(Guid)" />
+    <FunctionImport Name="usp_GetNewRunningNo" ReturnType="Collection(String)">
+      <Parameter Name="IsBilling" Mode="In" Type="String" />
+      <Parameter Name="PackageDeliveryType" Mode="In" Type="String" />
+      <Parameter Name="PackagelabBranch" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_GetNewRunningNo_CB" ReturnType="Collection(String)">
+      <Parameter Name="IsBilling" Mode="In" Type="String" />
+      <Parameter Name="PackageDeliveryType" Mode="In" Type="String" />
+      <Parameter Name="PackagelabBranch" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_top1_invoice" ReturnType="Collection(masterModel.usp_top1_invoice_Result)">
+      <Parameter Name="BILL_TO_COMPANY" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="AggregatedCounter">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Name="Key" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Value" Type="Int64" Nullable="false" />
+    <Property Name="ExpireAt" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Hash">
+    <Key>
+      <PropertyRef Name="Key" />
+      <PropertyRef Name="Field" />
+    </Key>
+    <Property Name="Key" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Field" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Value" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExpireAt" Type="DateTime" Precision="7" />
+  </EntityType>
+  <EntityType Name="Job">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StateId" Type="Int64" />
+    <Property Name="StateName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="InvocationData" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Arguments" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ExpireAt" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="JobParameters" Relationship="masterModel.FK_HangFire_JobParameter_Job" FromRole="Job" ToRole="JobParameter" />
+    <NavigationProperty Name="States" Relationship="masterModel.FK_HangFire_State_Job" FromRole="Job" ToRole="State" />
+  </EntityType>
+  <EntityType Name="JobParameter">
+    <Key>
+      <PropertyRef Name="JobId" />
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="JobId" Type="Int64" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Value" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Job" Relationship="masterModel.FK_HangFire_JobParameter_Job" FromRole="JobParameter" ToRole="Job" />
+  </EntityType>
+  <EntityType Name="JobQueue">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Queue" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="JobId" Type="Int64" Nullable="false" />
+    <Property Name="Queue" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FetchedAt" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="List">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Key" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Value" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExpireAt" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Schema">
+    <Key>
+      <PropertyRef Name="Version" />
+    </Key>
+    <Property Name="Version" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Server">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Data" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LastHeartbeat" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="Set">
+    <Key>
+      <PropertyRef Name="Key" />
+      <PropertyRef Name="Value" />
+    </Key>
+    <Property Name="Key" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Score" Type="Double" Nullable="false" />
+    <Property Name="Value" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="ExpireAt" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="State">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="JobId" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="JobId" Type="Int64" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Reason" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Data" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Job" Relationship="masterModel.FK_HangFire_State_Job" FromRole="State" ToRole="Job" />
+  </EntityType>
+  <EntityType Name="Counter">
+    <Key>
+      <PropertyRef Name="Key" />
+      <PropertyRef Name="Value" />
+    </Key>
+    <Property Name="Key" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Value" Type="Int32" Nullable="false" />
+    <Property Name="ExpireAt" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="vBillingAppointment">
+    <Key>
+      <PropertyRef Name="BA_ID" />
+      <PropertyRef Name="DiffAddress" />
+    </Key>
+    <Property Name="Package_ID" Type="Guid" />
+    <Property Name="BA_ID" Type="Guid" Nullable="false" />
+    <Property Name="BA_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Invoice_Cust_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Quote_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Invoice_To_Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Reports_To_Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DiffAddress" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Invoice_Note" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Delivery_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Delivery_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="STATUS_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="Invoice_To_Comany" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="vCB_BillingAppointment">
+    <Key>
+      <PropertyRef Name="CB_ID" />
+      <PropertyRef Name="DiffAddress" />
+    </Key>
+    <Property Name="CB_Package_ID" Type="Guid" />
+    <Property Name="CB_ID" Type="Guid" Nullable="false" />
+    <Property Name="CB_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CB_Invoice_ID" Type="Guid" />
+    <Property Name="CB_Invoice_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CB_Invoice_Cust_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CB_Quote_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CB_Bill_To_Company" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CB_Invoice_To_Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CB_Reports_To_Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DiffAddress" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="CB_Invoice_Note" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CB_Delivery_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Delivery_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CB_Status_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="STATUS_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CB_CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CB_CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="CB_UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CB_UpdateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="vCB_PackageList">
+    <Key>
+      <PropertyRef Name="CB_Package_ID" />
+    </Key>
+    <Property Name="CB_Package_ID" Type="Guid" Nullable="false" />
+    <Property Name="CB_Package_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CB_Package_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CB_Package_Delivery_Date" Type="DateTime" Precision="3" />
+    <Property Name="CB_Logistics_Delivery_Date" Type="DateTime" Precision="3" />
+    <Property Name="CB_Status_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="STATUS_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="vPackage">
+    <Key>
+      <PropertyRef Name="Invoice_ID" />
+      <PropertyRef Name="DiffAddress" />
+    </Key>
+    <Property Name="Package_ID" Type="Guid" />
+    <Property Name="BA_ID" Type="Guid" />
+    <Property Name="Invoice_ID" Type="Guid" Nullable="false" />
+    <Property Name="Package_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Package_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BA_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Invoice_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Quote_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Cust_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Bill_To_Company" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Delivery_To_Person" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Delivery_To_Tel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Delivery_Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Report_To_Comany" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Reports_To_Tel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Reports_To_Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Invoice_Note" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DiffAddress" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Invoice_Issue_Date" Type="DateTime" Precision="3" />
+    <Property Name="Invoice_Date_Override" Type="DateTime" Precision="3" />
+    <Property Name="Total_Invoice_Amount_Inc_Vat" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CreditTerm" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Delivery_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Package_Delivery_Date" Type="DateTime" Precision="3" />
+    <Property Name="Logistics_Delivery_Date" Type="DateTime" Precision="3" />
+    <Property Name="Status_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Expr1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="pack_CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="pack_CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="BA_CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BA_CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="inv_CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="inv_CreateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="vPackageList">
+    <Key>
+      <PropertyRef Name="Package_ID" />
+    </Key>
+    <Property Name="Package_ID" Type="Guid" Nullable="false" />
+    <Property Name="Package_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Package_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Package_Delivery_Date" Type="DateTime" Precision="3" />
+    <Property Name="Logistics_Delivery_Date" Type="DateTime" Precision="3" />
+    <Property Name="Status_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="STATUS_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <Association Name="FK_HangFire_JobParameter_Job">
+    <End Type="masterModel.Job" Role="Job" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="masterModel.JobParameter" Role="JobParameter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Job">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="JobParameter">
+        <PropertyRef Name="JobId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HangFire_State_Job">
+    <End Type="masterModel.Job" Role="Job" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="masterModel.State" Role="State" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Job">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="State">
+        <PropertyRef Name="JobId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TB_M_HOLIDAYS">
+    <Key>
+      <PropertyRef Name="HOLIDAYS_ID" />
+    </Key>
+    <Property Name="HOLIDAYS_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HOLIDAYS_DATE" Type="DateTime" Precision="0" />
+    <Property Name="HOLIDAYS_DAYS" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="COMMENT" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TB_M_Lab_Branch">
+    <Key>
+      <PropertyRef Name="Lab_Branch_ID" />
+    </Key>
+    <Property Name="Lab_Branch_ID" Type="Guid" Nullable="false" />
+    <Property Name="Lab_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Lab_Name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <ComplexType Name="usp_AdhocListInvoiceByInvoiceAddress_Result">
+    <Property Type="Guid" Name="Invoice_ID" Nullable="false" />
+    <Property Type="String" Name="Invoice_No" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="Invoice_Issue_Date" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="Invoice_Date_Override" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Bill_To_Company" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Delivery_Address" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Delivery_To_Person" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="STATUS_NAME" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="usp_CriteriaSearch_CB_Result">
+    <Property Type="DateTime" Name="Invoice_Issue_Date" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="Invoice_Date_Override" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Invoice_No" Nullable="true" MaxLength="50" />
+    <Property Type="Guid" Name="Invoice_ID" Nullable="false" />
+    <Property Type="Decimal" Name="Total_Invoice_Amount_Inc_Vat" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="Bill_To_Company" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ConsolidateBillingFlag" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="Is_CB_Created" Nullable="true" />
+    <Property Type="String" Name="Status_Code" Nullable="true" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="usp_CriteriaSearchBillingAppointment_Result">
+    <Property Type="Guid" Name="Package_ID" Nullable="false" />
+    <Property Type="String" Name="Package_No" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Package_Name" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="Package_Delivery_Date" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="Logistics_Delivery_Date" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Status_Code" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="STATUS_NAME" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="CreateBy" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="usp_top1_invoice_Result">
+    <Property Type="Guid" Name="Invoice_ID" Nullable="false" />
+    <Property Type="Guid" Name="BA_ID" Nullable="true" />
+    <Property Type="String" Name="Invoice_No" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Cust_Code" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Quote_Code" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Bill_To_Company" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Delivery_Address" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Delivery_To_Person" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Delivery_To_Tel" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Delivery_Type" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Delivery_Lab" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Report_To_Comany" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Reports_To_Address" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Reports_To_Tel" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Report_Location" Nullable="true" />
+    <Property Type="DateTime" Name="Invoice_Issue_Date" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="Invoice_Date_Override" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Invoice_Note" Nullable="true" />
+    <Property Type="String" Name="Invoice_Process" Nullable="true" MaxLength="500" />
+    <Property Type="Decimal" Name="Total_Invoice_Amount_Inc_Vat" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="CreditTerm" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Status_Code" Nullable="true" MaxLength="10" />
+    <Property Type="Boolean" Name="Is_CB_Created" Nullable="true" />
+    <Property Type="String" Name="GenerateBillingAppointmentPerInvoice" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ConsolidateBillingFlag" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ConsolidateBillingDeliverToOffice" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ConsolidateBillingToPersonName" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ConsolidateBillingDeliverToAddress1" Nullable="true" />
+    <Property Type="String" Name="ConsolidateBillingDeliverToAddress2" Nullable="true" />
+    <Property Type="String" Name="ConsolidateBillingDeliverToAddress3" Nullable="true" />
+    <Property Type="String" Name="ConsolidateBillingDeliverToCity" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ConsolidateBillingDeliverToState" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ConsolidateBillingDeliverToZip" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ConsolidateBillingDeliverToLocation" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ConsolidateBillingClientCode" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ConsolidateBillingCompanyName" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ConsolidateBillingToTelephone" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ConsolidateBillingToMobile" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ConsolidateBillingOtherLocation" Nullable="true" MaxLength="500" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="CreateBy" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="UpdateDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="UpdateBy" Nullable="true" MaxLength="50" />
+  </ComplexType>
+</Schema>
