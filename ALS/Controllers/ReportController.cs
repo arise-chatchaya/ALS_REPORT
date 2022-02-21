@@ -50,7 +50,7 @@ namespace ALS.Controllers
                 response.Content = new StreamContent(result);
                 response.Content.Headers.ContentType = mediaType;
                 response.Content.Headers.ContentDisposition = new ContentDispositionHeaderValue("attachment");
-                response.Content.Headers.ContentDisposition.FileName = "report01.pdf";
+                response.Content.Headers.ContentDisposition.FileName = "report02.pdf";
                 return ResponseMessage(response);
             }
             catch (Exception ex)
